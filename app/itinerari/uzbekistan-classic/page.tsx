@@ -352,15 +352,16 @@ export default function UzbekistanClassicPage() {
           </div>
         </section>
 <section className="mt-6 rounded-[2rem] border border-white/15 bg-[#16072F] p-6">
-  <p className="text-sm font-semibold tracking-[0.4em] text-[#D4AF37] uppercase">
-    L&apos;ALTRO UZBEKISTAN
-  </p>
+  <h2 className="text-5xl font-black uppercase leading-none tracking-[0.04em] text-[#D4AF37] md:text-7xl">
+  L&apos;altro<br />
+  Uzbekistan
+</h2>
 
-  <h2 className="mt-3 text-4xl font-extrabold leading-tight">
-    Oltre le città leggendarie
-    <br />
-    della Via della Seta
-  </h2>
+<div className="my-5 h-px w-full bg-[#D4AF37]/60" />
+
+<p className="text-3xl font-bold leading-tight text-white md:text-5xl">
+  Oltre le città leggendarie della Via della Seta
+</p>
 
   <p className="mt-4 leading-relaxed text-white/80">
     Estensioni del Tour Classico pensate per chi desidera vivere un Uzbekistan
