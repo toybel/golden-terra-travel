@@ -22,7 +22,7 @@ const days = [
      day: "1° GIORNO",
   title: "Tashkent, la capitale tra passato e modernità",
   subtitle: "Il primo incontro con l'Uzbekistan",
-  image: "/itinerari/uzbekistan-classic/tashkent.jpg",
+  image: "/itinerari/uzbekistan-classic/tashkent-.jpg",
   text: `Arrivo a Tashkent e incontro con il nostro staff locale. Dopo il trasferimento in hotel e un po' di riposo, inizia la scoperta della capitale uzbeka, dove la tradizione orientale incontra l'eredità dell'epoca sovietica.
 
 La visita parte dalla Città Vecchia con il complesso religioso di Khast Imam, che custodisce il celebre Corano del Califfo Osman, uno dei manoscritti coranici più antichi al mondo.
@@ -96,7 +96,7 @@ Cena in ristorante locale e pernottamento.`,
     day: "6° GIORNO",
   title: "Samarcanda",
   subtitle: "La perla dell'Oriente",
-  image: "/itinerari/uzbekistan-classic/samarcanda.jpg",
+  image: "/itinerari/uzbekistan-classic/samarcanda-.jpg",
   text: `Intera giornata dedicata alla visita di Samarcanda, città simbolo della Via della Seta e autentico gioiello dell'architettura timuride.
 
 Si visita la spettacolare Piazza Registan con le tre celebri madrase di Ulugh Beg, Sher-Dor e Tilla-Kari, la monumentale Moschea Bibi-Khanim e il vivace Bazar Siyob, ricco di colori, profumi e prodotti tipici locali.
