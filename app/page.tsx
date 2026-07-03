@@ -298,7 +298,7 @@ export default function Home() {
               src="/team/shukhrat-silvia.jpg"
               alt="Shukhrat and Silvia"
               width={900}
-              height={900}
+              height={1350}
               className="h-80 w-full object-cover"
             />
             <div className="p-5">
