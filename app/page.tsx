@@ -299,7 +299,7 @@ export default function Home() {
               alt="Shukhrat and Silvia"
               width={900}
               height={1350}
-              className="h-80 w-full object-cover"
+              className="w-full h-auto rounded-[2rem]"
             />
             <div className="p-5">
               <h2 className="text-3xl font-bold">Shukhrat & Silvia</h2>

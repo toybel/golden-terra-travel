@@ -352,12 +352,14 @@ export default function UzbekistanClassicPage() {
           </div>
         </section>
 <section className="mt-6 rounded-[2rem] border border-white/15 bg-[#16072F] p-6">
-  <p className="text-xs tracking-[0.35em] text-[#D4AF37]">
+  <p className="text-sm font-semibold tracking-[0.4em] text-[#D4AF37] uppercase">
     L&apos;ALTRO UZBEKISTAN
   </p>
 
-  <h2 className="mt-4 text-3xl font-bold">
-    Oltre le città leggendarie della Via della Seta
+  <h2 className="mt-3 text-4xl font-extrabold leading-tight">
+    Oltre le città leggendarie
+    <br />
+    della Via della Seta
   </h2>
 
   <p className="mt-4 leading-relaxed text-white/80">
