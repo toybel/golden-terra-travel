@@ -67,8 +67,8 @@ export default function Home() {
             <Image
               src="/logo/golden-terra-logo.png"
               alt="Golden Terra Travel LLC"
-              width={70}
-              height={70}
+              width={75}
+              height={75}
               className="h-12 w-auto object-contain"
             />
             <div>
