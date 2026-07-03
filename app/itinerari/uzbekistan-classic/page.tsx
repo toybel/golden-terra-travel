@@ -159,13 +159,13 @@ export default function UzbekistanClassicPage() {
 
         <section className="mt-5 overflow-hidden rounded-[2rem] border border-[#6800C8]/50 bg-[#16072F]">
           <Image
-            src="/itinerari/uzbekistan-classic/hero.jpg"
-            alt="Uzbekistan Classico"
-            width={1200}
-            height={900}
-            priority
-            className="h-[430px] w-full object-cover"
-          />
+  src="/itinerari/uzbekistan-classic/hero.jpg"
+  alt="Uzbekistan Classico"
+  width={1536}
+  height={1024}
+  priority
+  className="w-full h-auto"
+/>
 
           <div className="p-7">
             <p className="text-xs tracking-[0.35em] text-[#D4AF37]">
