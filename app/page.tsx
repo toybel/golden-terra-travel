@@ -94,7 +94,7 @@ export default function Home() {
             width={1200}
             height={900}
             priority
-            className="h-[470px] w-full object-cover"
+            className="h-[280px] sm:h-[360px] md:h-[470px] w-full object-cover object-top rounded-[2rem]"
           />
 
           <div className="px-7 py-10 text-center">
