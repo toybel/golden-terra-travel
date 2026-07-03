@@ -65,7 +65,7 @@ export default function Home() {
         <header className="sticky top-3 z-50 mt-3 flex items-center justify-between rounded-[2rem] border border-white/15 bg-[#120A24]/90 px-5 py-4 backdrop-blur">
           <div className="flex items-center gap-3">
             <Image
-              src="/logo/golden-terra-logo.png"
+              src="/logo/golden-terra-logo-white.png"
               alt="Golden Terra Travel LLC"
               width={85}
               height={85}
