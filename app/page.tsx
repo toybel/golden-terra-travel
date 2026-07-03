@@ -69,7 +69,7 @@ export default function Home() {
               alt="Golden Terra Travel LLC"
               width={85}
               height={85}
-              className="h-12 w-auto object-contain"
+              className="h-16 w-auto object-contain sm:h-20"
             />
             <div>
               <p className="text-sm font-bold tracking-[0.28em]">
