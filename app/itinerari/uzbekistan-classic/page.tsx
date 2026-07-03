@@ -96,7 +96,7 @@ Cena in ristorante locale e pernottamento.`,
     day: "6° GIORNO",
   title: "Samarcanda",
   subtitle: "La perla dell'Oriente",
-  image: "/itinerari/uzbekistan-classic/registan.jpg",
+  image: "/itinerari/uzbekistan-classic/samarcanda.jpg",
   text: `Intera giornata dedicata alla visita di Samarcanda, città simbolo della Via della Seta e autentico gioiello dell'architettura timuride.
 
 Si visita la spettacolare Piazza Registan con le tre celebri madrase di Ulugh Beg, Sher-Dor e Tilla-Kari, la monumentale Moschea Bibi-Khanim e il vivace Bazar Siyob, ricco di colori, profumi e prodotti tipici locali.
