@@ -22,7 +22,7 @@ const tours = [
     buttonLabel: "Vedi l'itinerario",
   },
   {
-    title: "Capodanno sulla Via della Seta 2027",
+    title: "Capodanno sulla Via della Seta 2026",
     text: "Festeggia il Capodanno nel cuore della Via della Seta con un viaggio speciale tra città leggendarie, atmosfere indimenticabili e tradizioni uzbeke.",
     image: "/tours/capodanno.png",
     variant: "poster",
