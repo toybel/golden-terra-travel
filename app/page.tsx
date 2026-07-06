@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Fragment } from "react";
+
 import {
   FaFacebookF,
   FaInstagram,
@@ -7,8 +8,10 @@ import {
   FaTiktok,
   FaYoutube,
   FaCalendarCheck,
+  FaMapMarkedAlt,
+  FaGlobe,
+  FaHandshake,
 } from "react-icons/fa";
-
 const tours = [
   {
     title: "Uzbekistan Classico",
@@ -106,11 +109,48 @@ export default function Home() {
               Tour Operator & DMC in Uzbekistan
             </p>
 
-            <div className="mt-8 space-y-3 text-base leading-relaxed text-white/90">
-              <p>Viaggi autentici lungo la Via della Seta.</p>
-              <p>Guide locali professionali parlanti italiano.</p>
-              <p>Assistenza italiana prima, durante e dopo il viaggio.</p>
-            </div>
+          <div className="mt-8 grid gap-4 text-center">
+  <div className="rounded-[1.5rem] border border-white/5 bg-white/[0.04] px-5 py-4">
+    <FaMapMarkedAlt className="mx-auto text-4xl text-[#D4AF37]" />
+
+    <h3 className="mt-3 text-lg font-semibold text-white">
+      Viaggi autentici 
+    </h3>
+
+    <p className="mt-1 text-sm text-white/75">
+      Oltre le città leggendarie della Via della Seta
+    </p>
+  </div>
+
+  <div className="rounded-[1.5rem] border border-white/5 bg-white/[0.04] px-5 py-4">
+    <FaGlobe className="mx-auto text-4xl text-[#D4AF37]" />
+
+    <h3 className="mt-3 text-lg font-semibold text-white">
+      Guide locali professionali
+    </h3>
+
+    <div className="mt-3 flex flex-wrap justify-center gap-x-4 gap-y-2 text-sm text-white/75">
+      <span>🇮🇹 Italiano</span>
+      <span>🇬🇧 English</span>
+      <span>🇫🇷 Français</span>
+      <span>🇩🇪 Deutsch</span>
+      <span>🇪🇸 Español</span>
+      <span>🇷🇺 Русский</span>
+    </div>
+  </div>
+
+  <div className="rounded-[1.5rem] border border-white/5 bg-white/[0.04] px-5 py-4">
+    <FaHandshake className="mx-auto text-4xl text-[#D4AF37]" />
+
+    <h3 className="mt-3 text-lg font-semibold text-white">
+      Assistenza dedicata
+    </h3>
+
+    <p className="mt-1 text-sm text-white/75">
+      Prima, durante e dopo il viaggio.
+    </p>
+  </div>
+</div>
 
             <div className="mt-9 flex justify-center gap-4">
               <a
@@ -129,19 +169,37 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="mt-5 rounded-[1.75rem] border border-[#D4AF37]/30 bg-[#16072F] px-6 py-5 text-center">
-          <p className="text-xs tracking-[0.35em] text-[#D4AF37]">
-            EVENTO 2026
-          </p>
+        <section className="mt-5 rounded-[1.75rem] border border-[#D4AF37]/30 bg-[#16072F] px-6 py-7 text-center">
+  <p className="text-xs tracking-[0.35em] text-[#D4AF37]">
+    EVENTO 2026
+  </p>
 
-          <h2 className="mt-2 text-2xl font-bold text-white">
-            ✨ Saremo al TTG Travel Experience
-          </h2>
+  <p className="mt-4 text-lg text-white/80">
+    ✨ Saremo al
+  </p>
 
-          <p className="mt-2 font-semibold text-[#D4AF37]">
-            8 • 9 • 10 ottobre 2026
-          </p>
-        </section>
+  <h2 className="mt-2 text-3xl font-bold text-white">
+    TTG Travel Experience
+  </h2>
+
+  <p className="mt-4 text-lg font-semibold text-[#D4AF37]">
+    14–16 ottobre 2026
+  </p>
+
+  <p className="mt-2 text-white/70">
+    Rimini Expo Centre
+  </p>
+
+  <div className="mt-5 rounded-xl border border-dashed border-[#D4AF37]/40 bg-white/5 px-4 py-3">
+    <p className="text-sm text-white/80">
+      📍 Padiglione e stand saranno comunicati prossimamente.
+    </p>
+  </div>
+
+  <p className="mt-5 text-sm text-white/80">
+    Ti aspettiamo a Rimini. Vieni a conoscere Golden Terra Travel.
+  </p>
+</section>
 
         <section className="mt-6 rounded-[2rem] border border-white/15 bg-[#16072F] p-6">
           <p className="text-xs tracking-[0.35em] text-[#D4AF37]">
@@ -155,7 +213,7 @@ export default function Home() {
               "Guide locali professionali parlanti italiano",
               "Tour individuali, di gruppo e su misura",
               "Esperienze autentiche in tutto l'Uzbekistan",
-              "Assistenza italiana prima, durante e dopo il viaggio",
+              "Assistenza internazionale con referente italiana, prima, durante e dopo il viaggio.",
               "Organizzazione completa dall'arrivo alla partenza",
             ].map((item) => (
               <div

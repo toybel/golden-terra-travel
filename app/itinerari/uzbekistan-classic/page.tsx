@@ -25,7 +25,7 @@ const days = [
   image: "/itinerari/uzbekistan-classic/tashkent-.jpg",
   text: `Arrivo a Tashkent e incontro con il nostro staff locale. Dopo il trasferimento in hotel e un po' di riposo, inizia la scoperta della capitale uzbeka, dove la tradizione orientale incontra l'eredità dell'epoca sovietica.
 
-La visita parte dalla Città Vecchia con il complesso religioso di Khast Imam, che custodisce il celebre Corano del Califfo Osman, uno dei manoscritti coranici più antichi al mondo.
+La visita parte dalla Città Vecchia con il complesso religioso di Khast Imam
 
 Si prosegue tra le spettacolari stazioni della metropolitana di Tashkent, autentiche opere d'arte sotterranee, e il vivace Bazar Chorsu, ricco di spezie, pane tradizionale e colori della Via della Seta.
 
