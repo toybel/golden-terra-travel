@@ -299,29 +299,29 @@ export default function UzbekistanClassicPage() {
     Parti quando preferisci: tutte le date indicate sono partenze garantite.
   </p>
 
-  <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
-    {[
-      "5 Agosto",
-      "18 Agosto",
-      "6 Settembre",
-      "17 Settembre",
-      "19 Ottobre",
-      "21 Ottobre",
-      "3 Novembre",
-      "7 Novembre",
-      "29 Dicembre",
-      "20 Marzo",
-      "13 Maggio",
-    ].map((date) => (
-     <div
-  key={date}
-  className="flex items-center justify-center rounded-2xl border border-white/15 bg-white/5 px-5 py-4 font-semibold transition-all duration-300 hover:border-[#E6C24A] hover:bg-white/10 hover:-translate-y-1"
->
-  <FaCalendarCheck className="mr-3 text-[#E6C24A]" />
-  {date}
+<div className="mt-8 grid grid-cols-2 gap-3">
+  {[
+    "5 Agosto",
+    "18 Agosto",
+    "6 Settembre",
+    "17 Settembre",
+    "19 Ottobre",
+    "21 Ottobre",
+    "3 Novembre",
+    "7 Novembre",
+    "29 Dicembre",
+    "20 Marzo",
+    "13 Maggio",
+  ].map((date) => (
+    <div
+      key={date}
+      className="flex min-h-[72px] items-center justify-center gap-3 rounded-2xl border border-white/15 bg-white/5 px-3 py-3 text-center text-sm font-semibold leading-tight transition-all duration-300 hover:-translate-y-1 hover:border-[#E6C24A] hover:bg-white/10 sm:text-base"
+    >
+      <FaCalendarCheck className="h-5 w-5 shrink-0 text-[#E6C24A]" />
+      <span>{date}</span>
+    </div>
+  ))}
 </div>
-    ))}
-  </div>
 </section>
         <section className="mt-6 grid grid-cols-2 gap-4">
   <Image
