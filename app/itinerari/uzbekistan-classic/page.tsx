@@ -155,7 +155,7 @@ Pernottamento in hotel.`,
   icon: "star",
   title: "Samarcanda, la Perla della Via della Seta",
   subtitle: "Nel cuore dell'antico Impero di Tamerlano",
-  image: "/itinerari/uzbekistan-classic/samarcanda.jpg",
+  image: "/itinerari/uzbekistan-classic/samarcanda2.jpg",
   text: `Prima colazione in hotel.
 
 Intera giornata dedicata alla scoperta di **Samarcanda**, una delle città più antiche del mondo e autentico gioiello della **Via della Seta**.
