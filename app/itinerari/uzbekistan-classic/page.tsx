@@ -1,10 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaWhatsapp } from "react-icons/fa";
-import { FaMapMarkerAlt } from "react-icons/fa";
+
 import { HiMapPin } from "react-icons/hi2";
+
 import {
-   FaPassport,
+  FaWhatsapp,
+  FaMapMarkerAlt,
+  FaPassport,
   FaMoneyBillWave,
   FaWifi,
   FaSun,
@@ -13,109 +15,183 @@ import {
   FaBriefcaseMedical,
   FaChevronDown,
   FaPhoneAlt,
+  FaCalendarCheck,
+  FaPlug,
+  FaPlane,
+  FaMosque,
+  FaRoad,
+  FaTrain,
+  FaStar,
 } from "react-icons/fa";
-import { FaCalendarCheck } from "react-icons/fa";
-import { FaPlug } from "react-icons/fa";
-
 const days = [
   {
-     day: "1° GIORNO",
-  title: "Tashkent, la capitale tra passato e modernità",
-  subtitle: "Il primo incontro con l'Uzbekistan",
+  day: "1° GIORNO",
+  icon: "plane",
+  title: "Arrivo a Tashkent",
+  subtitle: "Benvenuti in Uzbekistan",
   image: "/itinerari/uzbekistan-classic/tashkent-.jpg",
-  text: `Arrivo a Tashkent e incontro con il nostro staff locale. Dopo il trasferimento in hotel e un po' di riposo, inizia la scoperta della capitale uzbeka, dove la tradizione orientale incontra l'eredità dell'epoca sovietica.
+  text: `Arrivo all'Aeroporto Internazionale di Tashkent con il volo Turkish Airlines TK370, previsto intorno alle ore 00:55.
 
-La visita parte dalla Città Vecchia con il complesso religioso di Khast Imam
+Incontro con il nostro assistente locale e trasferimento in hotel con mezzi privati.
 
-Si prosegue tra le spettacolari stazioni della metropolitana di Tashkent, autentiche opere d'arte sotterranee, e il vivace Bazar Chorsu, ricco di spezie, pane tradizionale e colori della Via della Seta.
+Pernottamento in hotel.`,
+  mapCity: "arrivalTashkent",
+},
+ {
+  day: "2° GIORNO",
+  icon: "mosque",
+  title: "Tashkent, tra storia e modernità",
+  subtitle: "La capitale tra tradizione e architettura contemporanea",
+  image: "/itinerari/uzbekistan-classic/tashkent-1.png",
+  text: `Prima colazione in hotel.
 
-Passeggiata in Piazza dell'Indipendenza e in Piazza Amir Temur, cuore della città moderna.
+La giornata è dedicata alla scoperta di **Tashkent**, la vivace capitale dell'Uzbekistan, dove il fascino della tradizione convive armoniosamente con l'architettura contemporanea.
 
-Cena in ristorante locale e pernottamento.`,
+La visita inizia dalla **Città Vecchia**, un dedalo di strette viuzze costeggiate da antiche abitazioni in mattoni crudi, per poi raggiungere il **Complesso di Khast Imam**, cuore spirituale della città.
+
+Il complesso custodisce alcune delle più antiche testimonianze della cultura islamica dell'Asia Centrale ed è formato da moschee, madrase, mausolei e biblioteche storiche decorate con splendide maioliche turchesi. Tra i monumenti più importanti si trovano la **Madrasa Barak Khan** del XVI secolo, il **Mausoleo di Kaffal Shashi**, santo patrono di Tashkent, e la **Moschea Tilla Sheikh**.
+
+Passeggiare tra i cortili silenziosi del **Complesso di Khast Imam** significa immergersi nell'atmosfera mistica della Via della Seta, tra cupole azzurre, archi decorati e antiche tradizioni spirituali.
+
+Si prosegue con la spettacolare **Metropolitana di Tashkent**, autentico museo sotterraneo dell'epoca sovietica, celebre per le sue eleganti stazioni decorate con mosaici, marmi e lampadari.
+
+Visita del **Bazar Chorsu**, il più grande mercato tradizionale dell'Asia Centrale, dove profumi di spezie, frutta secca, pane appena sfornato e prodotti locali raccontano la quotidianità del popolo uzbeko. Durante la visita sarà possibile assistere anche alla preparazione del tipico pane uzbeko.
+
+La giornata continua con **Piazza dell'Indipendenza** e **Piazza Amir Temur**, dominata dalla monumentale statua equestre del grande condottiero e circondata dagli edifici simbolo della capitale, tra cui il celebre **Hotel Uzbekistan**.
+
+Cena in ristorante.
+
+Pernottamento in hotel.`,
   mapCity: "tashkent",
-  },
-  {
-    day: "2° GIORNO",
-  title: "Tashkent ✈ Urgench – Khiva",
-  subtitle: "La città delle Mille e una Notte",
-  image: "/itinerari/uzbekistan-classic/khiva.jpg",
-  text: `Dopo la prima colazione trasferimento in aeroporto e volo interno verso Urgench. Da qui si raggiunge Khiva, antica città carovaniera lungo la Via della Seta.
-
-L'intera giornata è dedicata alla visita della straordinaria cittadella fortificata di Ichan-Kala, Patrimonio Mondiale UNESCO, con madrase, moschee, minareti e abitazioni tradizionali perfettamente conservate.
-
-Durante la visita sarà possibile osservare anche la preparazione del tradizionale pane uzbeko.
-
-Khiva incanta con le sue mura color ocra, le cupole turchesi e un'atmosfera orientale senza tempo che al tramonto regala scorci indimenticabili.
-
-Cena in ristorante locale e pernottamento.`,
-  mapCity: "khiva",
-  },
+},
 {
-   day: "3° GIORNO",
-  title: "Khiva – Bukhara",
+  day: "3° GIORNO",
+  icon: "plane",
+  title: "Tashkent • Urgench • Khiva",
+  subtitle: "La città delle Mille e Una Notte",
+  image: "/itinerari/uzbekistan-classic/khiva.jpg",
+  text: `Prima colazione in hotel e trasferimento all'aeroporto per il volo interno verso **Urgench**.
+
+All'arrivo, proseguimento per **Khiva**, la leggendaria "città delle Mille e Una Notte". Sistemazione in hotel e inizio della visita della straordinaria **Ichan Kala**, la città antica fortificata dichiarata **Patrimonio Mondiale UNESCO**.
+
+Circondata da imponenti mura di argilla, **Ichan Kala** custodisce minareti turchesi, madrase, moschee, antichi palazzi e suggestivi cortili decorati con splendide maioliche blu e turchesi. Al tramonto, le sue strade silenziose regalano un'atmosfera unica lungo la Via della Seta.
+
+Durante la visita si scopriranno la **Kunya Ark**, antica cittadella dei sovrani di Khiva, il raffinato **Palazzo Tash-Hauli**, il celebre **Minareto Kalta Minor**, simbolo della città, la monumentale **Madrasa Muhammad Amin Khan**, il magnifico **Mausoleo di Pahlavan Mahmud**, luogo sacro e capolavoro dell'architettura di Khiva, e la suggestiva **Moschea Juma**, famosa per la sua sala sostenuta da oltre duecento colonne lignee scolpite.
+
+Durante il percorso sarà inoltre possibile assistere alla preparazione del tradizionale **pane uzbeko** e, se la fortuna lo permetterà, incontrare le tipiche celebrazioni matrimoniali locali.
+
+Cena in ristorante locale e passeggiata serale nel centro storico illuminato.
+
+Pernottamento in hotel.`,
+  mapCity: "tashkentUrgenchKhiva",
+},
+{
+  day: "4° GIORNO",
+  icon: "road",
+  title: "Khiva • Bukhara",
   subtitle: "Attraversando il deserto del Kyzylkum",
   image: "/itinerari/uzbekistan-classic/bukhara.jpg",
-  text: `Partenza per Bukhara attraversando il suggestivo deserto del Kyzylkum, le celebri "sabbie rosse" dell'Asia Centrale. Durante il viaggio si costeggia il maestoso fiume Amu Darya, conosciuto nell'antichità con il nome di Oxus.
+  text: `Prima colazione in hotel.
 
-Dopo una sosta lungo il percorso si raggiunge Bukhara nel tardo pomeriggio. Passeggiata nella splendida piazza Lyabi-Khauz, cuore della città storica.
+Partenza per **Bukhara** attraversando gli spettacolari paesaggi del **Deserto del Kyzylkum**, il cui nome significa "sabbie rosse". Durante il viaggio si costeggerà il maestoso **fiume Amu Darya**, uno dei più importanti corsi d'acqua dell'Asia Centrale.
 
-La serata si conclude con una cena in un tipico home restaurant, dove assisteremo alla preparazione del celebre plov, piatto simbolo della cucina uzbeka.
+Arrivo a **Bukhara** e sistemazione in hotel.
+
+In serata vivrete un'esperienza autentica in un tipico **home restaurant**, dove assisterete alla preparazione del **Plov**, il piatto nazionale uzbeko, simbolo di convivialità e tradizione.
+
+Passeggiata serale nella suggestiva **Piazza Lyabi-Hauz**, splendidamente illuminata.
+
+Cena in ristorante.
 
 Pernottamento in hotel.`,
   mapCity: "khivaBukhara",
 },
 {
-   day: "4° GIORNO",
-  title: "Bukhara",
-  subtitle: "La città santa della Via della Seta",
+  day: "5° GIORNO",
+  icon: "mosque",
+  title: "Bukhara, la Città Santa",
+  subtitle: "Nel cuore spirituale della Via della Seta",
   image: "/itinerari/uzbekistan-classic/bukhara1.jpg",
-  text: `Intera giornata dedicata alla scoperta di Bukhara, una delle città più affascinanti e spirituali dell'Asia Centrale, per secoli crocevia di mercanti, studiosi e pellegrini lungo la Via della Seta.
+  text: `Prima colazione in hotel.
 
-Si visitano il Mausoleo dei Samanidi, autentico capolavoro dell'architettura islamica, la maestosa Fortezza Ark, la Moschea Bolo-Khauz, la caratteristica madrasa Chor Minor e il monumentale complesso Po-i-Kalyan.
+Intera giornata dedicata alla scoperta di **Bukhara**, una delle città più sacre e affascinanti dell'Asia Centrale, per secoli importante centro religioso, culturale e commerciale lungo la Via della Seta.
 
-La visita prosegue nel quartiere ebraico, con la storica sinagoga (se aperta), e tra gli antichi bazar coperti di Toqi Telpak Furushon e Toqi Zargaron, dove ancora oggi si respirano le atmosfere dei mercati della Via della Seta.
+La visita comprende il **Mausoleo dei Samanidi**, la **Moschea Bolo-Khauz**, la maestosa **Fortezza Ark**, la caratteristica **Madrasa Chor Minor** e il monumentale **Complesso Po-i-Kalyan**, autentico simbolo della città.
 
-Cena in ristorante locale e pernottamento.`,
+Il **Complesso Po-i-Kalyan**, costruito tra il XII e il XVI secolo, riunisce alcuni dei più importanti capolavori dell'architettura islamica dell'Asia Centrale: il maestoso **Minareto Kalon**, alto quasi 47 metri e simbolo di Bukhara, la spettacolare **Moschea Kalon**, una delle più grandi dell'Uzbekistan, e la prestigiosa **Madrasa Mir-i Arab**, ancora oggi sede di studi islamici.
+
+La visita prosegue tra gli antichi **bazar coperti** della città e nel suggestivo **quartiere ebraico**, con visita della storica **sinagoga** (se aperta).
+
+Al termine delle visite tempo a disposizione.
+
+Cena in ristorante locale.
+
+Pernottamento in hotel.`,
   mapCity: "bukhara",
 },
 {
-  day: "5° GIORNO",
-  title: "Bukhara – Shahrisabz – Samarcanda",
-  subtitle: "Sulle orme di Tamerlano",
-  image: "/itinerari/uzbekistan-classic/shahrisabz.jpg",
-  text: `Dopo la prima colazione partenza per Shahrisabz, la città natale di Amir Temur, conosciuto in Occidente come Tamerlano. Il suo nome significa "Città Verde" e rappresenta uno dei luoghi più importanti della storia dell'Impero Timuride.
+  day: "6° GIORNO",
+  icon: "train",
+  title: "Bukhara • Gijduvan • Samarcanda",
+  subtitle: "Tra ceramiche e città leggendarie",
+  image: "/itinerari/uzbekistan-classic/guduvan.png",
+  text: `Prima colazione in hotel.
 
-Visita delle monumentali rovine del Palazzo Ak-Saray, dei complessi funerari Dorus-Saodat e Dorut-Tilovat e della grande Moschea Kok-Gumbaz, testimonianze dello splendore dell'antica capitale timuride.
+Partenza per **Samarcanda**, con trasferimento organizzato in **auto** oppure con il **treno veloce**, in base all'organizzazione del tour.
 
-Nel pomeriggio proseguimento verso Samarcanda. Arrivo, sistemazione in hotel e passeggiata serale davanti alla magnifica Piazza Registan illuminata, uno degli scenari più suggestivi dell'Asia Centrale.
+Nel trasferimento via strada è prevista una sosta a **Gijduvan**, celebre centro della ceramica uzbeka, con visita al prestigioso laboratorio della **famiglia Narzullaev**, dove da generazioni si tramandano le antiche tecniche di lavorazione della ceramica. Sarà possibile osservare gli artigiani al lavoro, visitare il museo privato e degustare il tradizionale pane locale.
 
-Cena in ristorante locale e pernottamento.`,
-  mapCity: "shahrisabz",
-},
-{
-    day: "6° GIORNO",
-  title: "Samarcanda",
-  subtitle: "La perla dell'Oriente",
-  image: "/itinerari/uzbekistan-classic/samarcanda-.jpg",
-  text: `Intera giornata dedicata alla visita di Samarcanda, città simbolo della Via della Seta e autentico gioiello dell'architettura timuride.
+Chi viaggia in treno potrà invece godere di tempo libero a **Bukhara** prima del trasferimento alla stazione ferroviaria e della partenza con il moderno **treno veloce** per Samarcanda.
 
-Si visita la spettacolare Piazza Registan con le tre celebri madrase di Ulugh Beg, Sher-Dor e Tilla-Kari, la monumentale Moschea Bibi-Khanim e il vivace Bazar Siyob, ricco di colori, profumi e prodotti tipici locali.
+All'arrivo sistemazione in hotel.
 
-Ogni angolo di Samarcanda racconta il fasto dell'Impero di Tamerlano e il ruolo che questa città ebbe come uno dei principali centri culturali e commerciali dell'Oriente.
+Dopo cena passeggiata serale nella spettacolare **Piazza Registan**, illuminata in tutta la sua magnificenza.
 
-Cena in ristorante locale e pernottamento.`,
-  mapCity: "samarkand",
+Pernottamento in hotel.`,
+  mapCity: "bukharaGijduvanSamarcanda",
 },
 {
   day: "7° GIORNO",
-  title: "Samarcanda – Tashkent",
+  icon: "star",
+  title: "Samarcanda, la Perla della Via della Seta",
+  subtitle: "Nel cuore dell'antico Impero di Tamerlano",
+  image: "/itinerari/uzbekistan-classic/samarcanda.jpg",
+  text: `Prima colazione in hotel.
+
+Intera giornata dedicata alla scoperta di **Samarcanda**, una delle città più antiche del mondo e autentico gioiello della **Via della Seta**.
+
+Il cuore della visita è la spettacolare **Piazza Registan**, considerata una delle piazze monumentali più belle del mondo islamico. Per secoli rappresentò il centro politico, culturale e commerciale dell'Asia Centrale, luogo d'incontro di mercanti, studiosi e viaggiatori provenienti da Oriente e Occidente.
+
+La piazza è dominata dalle magnifiche **Madrasa di Ulugh Beg**, **Sher-Dor** e **Tillya-Kari**, straordinari capolavori dell'architettura timuride, impreziositi da mosaici turchesi, maioliche e raffinati decori geometrici.
+
+La visita prosegue con la monumentale **Moschea Bibi-Khanym**, il **Mausoleo Gur-e Amir**, luogo di sepoltura di **Tamerlano**, e il vivace **Bazar Siyob**, ricco di profumi, colori e specialità della tradizione uzbeka.
+
+Al termine delle visite tempo a disposizione.
+
+Cena in ristorante locale.
+
+Pernottamento in hotel.`,
+  mapCity: "samarkand",
+},
+{
+  day: "8° GIORNO",
+  icon: "train",
+  title: "Samarcanda • Tashkent",
   subtitle: "L'ultimo saluto alla Via della Seta",
   image: "/itinerari/uzbekistan-classic/gur-e-amir.jpg",
-  text: `Ultime visite dedicate ai luoghi più iconici di Samarcanda: l'Osservatorio di Ulugh Beg, il suggestivo complesso monumentale di Shah-i-Zinda, il villaggio di Konigil con la dimostrazione dell'antica produzione della carta di seta e il Mausoleo Gur-e-Amir, luogo di sepoltura di Tamerlano e dei suoi discendenti.
+  text: `Prima colazione in hotel.
 
-Nel tardo pomeriggio trasferimento alla stazione ferroviaria e partenza con il treno veloce per Tashkent.
+La mattinata è dedicata alle ultime visite di **Samarcanda**, con il magnifico **Complesso di Shah-i-Zinda**, autentico capolavoro dell'arte islamica, e lo storico **Osservatorio di Ulugh Beg**, uno dei più importanti centri astronomici del XV secolo.
 
-Dopo la cena in ristorante locale, trasferimento in aeroporto per il volo di rientro, portando con sé i colori, i profumi e i ricordi di un viaggio indimenticabile lungo la Via della Seta.`,
+A seguire una delle esperienze più autentiche del viaggio: visita al **Villaggio di Konigil**, dove si trova la storica manifattura della **Carta di Samarcanda**. Qui sarà possibile assistere all'antica lavorazione artigianale della carta ottenuta dalla corteccia del gelso, secondo tecniche tramandate da secoli.
+
+Nel tardo pomeriggio partenza con il **treno veloce** per **Tashkent**.
+
+Cena in ristorante locale.
+
+Successivamente trasferimento all'**Aeroporto Internazionale di Tashkent** per il volo **Turkish Airlines TK371**, previsto intorno alle ore **02:35** del giorno successivo.
+
+Fine dei nostri servizi, con il cuore colmo di ricordi, colori e atmosfere dell'antica Via della Seta.`,
   mapCity: "samarkandTashkent",
 },
  ];
@@ -128,13 +204,29 @@ const highlights = [
   "Organizzazione completa dall’arrivo alla partenza",
 ];
 const dayMaps: Record<string, string> = {
-  tashkent: "https://www.google.com/maps/d/view?mid=1_bsk3HCMYWfPUjxpnEDbcq0G7MVUg24&z=13",
- khiva: "https://www.google.com/maps/d/view?mid=17fccGjbIAcWbfAAhOfpSn4jUTEHd_l4&z=15",
-  khivaBukhara: "https://www.google.com/maps/d/view?mid=1jHOV0ZloFW2tmqv3bwOIuKXui2CLTXs&z=8",
-  bukhara: "https://www.google.com/maps/d/view?mid=14xu6_BHKVZ6ceGrYq9UKlAPOsw2UpUg&z=15",
-  shahrisabz: "https://www.google.com/maps/d/view?mid=1PqKMnoi39mdosyI619HOTlJOR-OBeOo&z=13",
-  samarkand: "https://www.google.com/maps/d/view?mid=1eI2fi1QYz_vqlAF_y3rrsxu1lNy7PFY&z=14",
-  samarkandTashkent: "https://www.google.com/maps/d/view?mid=1czTa7vw98i3PH9TwqhP2t-hwbQUVkYE&z=13",
+  arrivalTashkent: "https://www.google.com/maps/d/u/6/viewer?mid=1YlmVCEGdcJyGlDjir2gkPLbKgxVIiEc",
+
+  tashkent: "https://www.google.com/maps/d/u/6/viewer?mid=1B1klRr5PwVkqcWLjCOVQA31Po4FfjrI",
+
+  tashkentUrgenchKhiva: "https://www.google.com/maps/d/u/6/viewer?mid=1AwdsbB6Jw1GHciA0eTGJ7rz91MTABNo",
+
+  khivaBukhara: "https://www.google.com/maps/d/u/6/viewer?mid=19fFQ2Rxaovy-reF2y7u2FzI6qN6EYEw",
+
+  bukhara: "https://www.google.com/maps/d/u/6/viewer?mid=1nF4K57NBLwIuUMGqN5uMeB6S3csM5cI",
+
+  bukharaGijduvanSamarcanda: "https://www.google.com/maps/d/u/6/viewer?mid=1mJL_K103plggEhstakP2UkwDISbF3BU",
+
+  samarkand: "https://www.google.com/maps/d/u/6/viewer?mid=1jUOQe5RAHJH9ojzAJiQO_hI-1RRivoM",
+
+  samarkandTashkent: "https://www.google.com/maps/d/u/6/viewer?mid=15wiEHoLBXfkXPoDsYKW0b_QMR-XPL50",
+};
+
+const dayIcons = {
+  plane: <FaPlane className="h-7 w-7 shrink-0 text-[#D4AF37]" />,
+  mosque: <FaMosque className="h-7 w-7 shrink-0 text-[#D4AF37]" />,
+  road: <FaRoad className="h-7 w-7 shrink-0 text-[#D4AF37]" />,
+  train: <FaTrain className="h-7 w-7 shrink-0 text-[#D4AF37]" />,
+  star: <FaStar className="h-7 w-7 shrink-0 text-[#D4AF37]" />,
 };
 
 
@@ -176,14 +268,14 @@ export default function UzbekistanClassicPage() {
               Uzbekistan Classico
             </h1>
 <p className="mt-3 text-xl font-semibold text-[#D4AF37]">
-  7 giorni • 7 notti
+  8 giorni • 7 notti
 </p>
 <p className="mt-4 text-lg leading-relaxed text-white/80">
-  Un viaggio di 7 giorni alla scoperta di Tashkent, Khiva, Bukhara, Shahrisabz e Samarcanda, lungo l'antica Via della Seta.
+  Un viaggio di 8 giorni alla scoperta di Tashkent, Khiva, Bukhara, Gijduvan e Samarcanda, lungo l'antica Via della Seta.
 </p>
             
             <p className="mt-4 text-lg leading-relaxed text-white/80">
-  Un itinerario tra città Patrimonio UNESCO, bazar storici, madrase e l'eredità di Tamerlano, accompagnato dall'autentica ospitalità uzbeka, dai sapori della cucina locale e dai sorrisi di un popolo che accoglie ogni viaggiatore con il cuore.
+  Un itinerario tra città Patrimonio UNESCO, bazar storici, madrase e antiche tradizioni della Via della Seta, arricchito dall'autentica ospitalità uzbeka, dai sapori della cucina locale e dai sorrisi di un popolo che accoglie ogni viaggiatore con il cuore.
 </p>
 
             <a
@@ -219,6 +311,7 @@ export default function UzbekistanClassicPage() {
       "7 Novembre",
       "29 Dicembre",
       "20 Marzo",
+      "13 Maggio",
     ].map((date) => (
      <div
   key={date}
@@ -264,7 +357,7 @@ export default function UzbekistanClassicPage() {
   <div className="mt-4 overflow-hidden rounded-[1.5rem] border border-white/10">
     <iframe
       className="block h-[520px] w-full"
-      src="https://www.google.com/maps/d/u/6/embed?mid=1vu2o_yPQMUKKNsm2c2FSMMzYWyTxNU8&ehbc=2E312F"
+      src="https://www.google.com/maps/d/u/6/embed?mid=12wC1NP7fO8dEAsd8Lch93hYelH27OW0&ehbc=2E312"
       style={{ border: 0 }}
       loading="lazy"
       allowFullScreen
@@ -282,7 +375,7 @@ export default function UzbekistanClassicPage() {
   </h2>
 
   <p className="mt-4 leading-relaxed text-white/80">
-    Un itinerario che racchiude arte, cultura e accoglienza senza tempo: dalle città leggendarie della Via della Seta alla storia di Tamerlano e allo splendore timuride.
+    Un itinerario che racchiude arte, cultura e accoglienza senza tempo: dalle città leggendarie della Via della Seta ai capolavori dell'architettura islamica, tra antiche tradizioni e autentica ospitalità uzbeka.
   </p>
 
   <p className="mt-4 leading-relaxed text-white/80">
@@ -321,9 +414,14 @@ export default function UzbekistanClassicPage() {
                     {item.day}
                   </p>
 
-                  <h3 className="mt-2 text-2xl font-bold">
-                    {item.title}
-                  </h3>
+                  <div className="mt-2 flex items-center gap-3">
+                    {item.icon &&
+                      dayIcons[item.icon as keyof typeof dayIcons]}
+
+                    <h3 className="text-2xl font-bold">
+                      {item.title}
+                    </h3>
+                  </div>
 
                   {item.subtitle && (
                     <p className="mt-1 text-base font-medium tracking-wide text-[#D4AF37]">
@@ -331,11 +429,19 @@ export default function UzbekistanClassicPage() {
                     </p>
                   )}
 
-                  <div className="mt-4 space-y-4 leading-relaxed text-white/75">
-                    {item.text.split("\n\n").map((paragraph, index) => (
-                      <p key={index}>{paragraph}</p>
-                    ))}
-                  </div>
+                <div className="mt-4 space-y-4 leading-relaxed text-white/75">
+  {item.text.split("\n\n").map((paragraph, index) => (
+    <p
+      key={index}
+      dangerouslySetInnerHTML={{
+        __html: paragraph.replace(
+          /\*\*(.*?)\*\*/g,
+          "<strong class='text-white'>$1</strong>"
+        ),
+      }}
+    />
+  ))}
+</div>
 
                   <a
                     href={dayMaps[item.mapCity]}
@@ -539,40 +645,43 @@ Un'esperienza intensa e fuori dai percorsi tradizionali, tra memoria, natura est
         <FaChevronDown className="transition-transform duration-300 group-open:rotate-180" />
       </summary>
 
-      <p className="mt-5 leading-8 text-white/75">
-       <div className="mt-5 space-y-4 leading-8 text-white/75">
+      <div className="mt-5 space-y-4 leading-8 text-white/75">
+        <p>
+          Naviga in Internet fin dal tuo arrivo in Uzbekistan{" "}
+          <strong>senza costi di roaming</strong>.
+        </p>
 
-  <p>
-    Naviga in Internet fin dal tuo arrivo in Uzbekistan <strong>senza costi di roaming</strong>.
-  </p>
+        <p>
+          Golden Terra Travel consiglia <strong>Holafly</strong>, la eSIM
+          internazionale che permette di connettersi in pochi minuti senza
+          sostituire la SIM del proprio telefono.
+        </p>
 
-  <p>
-    Golden Terra Travel consiglia <strong>Holafly</strong>, la eSIM internazionale che permette di connettersi in pochi minuti senza sostituire la SIM del proprio telefono.
-  </p>
+        <p>
+          <strong>
+            Ti consigliamo di acquistare e installare la eSIM prima della partenza
+          </strong>
+          , così sarà pronta ad attivarsi automaticamente al tuo arrivo in
+          Uzbekistan.
+        </p>
 
-  <p>
-    <strong>Ti consigliamo di acquistare e installare la eSIM prima della partenza</strong>, così sarà pronta ad attivarsi automaticamente al tuo arrivo in Uzbekistan.
-  </p>
+        <ul className="list-disc space-y-2 pl-6">
+          <li>Installazione semplice tramite QR Code</li>
+          <li>Attivazione automatica all&apos;arrivo</li>
+          <li>Nessun costo di roaming internazionale</li>
+          <li>Assistenza clienti 24 ore su 24</li>
+          <li>Ottima copertura di rete durante il viaggio</li>
+        </ul>
 
-  <ul className="list-disc space-y-2 pl-6">
-    <li>Installazione semplice tramite QR Code</li>
-    <li>Attivazione automatica all'arrivo</li>
-    <li>Nessun costo di roaming internazionale</li>
-    <li>Assistenza clienti 24 ore su 24</li>
-    <li>Ottima copertura di rete durante il viaggio</li>
-  </ul>
-
-  <a
-    href="https://esim.holafly.com/it/?sref_id=gvulg3l&utm_campaign=referral_program&utm_source=loyalty"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-flex rounded-full bg-[#D4AF37] px-6 py-3 font-bold text-black transition hover:bg-[#f0ca55]"
-  >
-    📶 Acquista la tua eSIM Holafly
-  </a>
-
-</div>
-      </p>
+        <a
+          href="https://esim.holafly.com/it/?sref_id=gvulg3l&utm_campaign=referral_program&utm_source=loyalty"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex rounded-full bg-[#D4AF37] px-6 py-3 font-bold text-black transition hover:bg-[#f0ca55]"
+        >
+          📶 Acquista la tua eSIM Holafly
+        </a>
+      </div>
     </details>
     <details className="group rounded-2xl border border-white/15 bg-white/5 p-5 transition-all">
       <summary className="flex cursor-pointer list-none items-center justify-between">

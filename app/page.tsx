@@ -52,6 +52,7 @@ const guaranteedDepartures = [
   "7 Novembre",
   "29 Dicembre",
   "20 Marzo",
+  "13 Maggio",
 ];
 
 const contacts = [
