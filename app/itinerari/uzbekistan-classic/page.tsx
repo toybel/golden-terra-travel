@@ -420,7 +420,7 @@ export default function UzbekistanClassicPage() {
                   className="h-72 w-full object-cover"
                 />
 
-                <div className="px-3 py-6">
+                <div className="px-4 py-6">
                   <p className="text-sm font-bold text-[#D4AF37]">{item.day}</p>
 
                   <div className="mt-2 flex items-center gap-3">
