@@ -1047,9 +1047,13 @@ Un'esperienza intensa e fuori dai percorsi tradizionali, tra memoria, natura est
                 🇺🇿 Buon viaggio!
               </h2>
 
-              <p className="mt-6 leading-8 text-white/85">
-                Grazie per aver scelto <strong>Golden Terra Travel</strong>.
-              </p>
+             <p className="mt-6 text-white/85">
+  Grazie per aver scelto
+</p>
+
+<p className="mt-2 text-2xl font-bold text-[#D4AF37]">
+  Golden Terra Travel
+</p>
 
               <p className="mt-4 leading-8 text-white/85">
                 Ti auguriamo un viaggio ricco di emozioni, storia e incontri
