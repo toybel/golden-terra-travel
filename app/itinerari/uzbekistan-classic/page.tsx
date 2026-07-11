@@ -239,8 +239,8 @@ const dayIcons = {
 
 export default function UzbekistanClassicPage() {
   return (
-    <main lang="it" className="min-h-screen bg-[#080414] text-white">
-      <div className="mx-auto max-w-[620px] px-5 pb-24 sm:px-6">
+    <main className="min-h-screen bg-[#080414] text-white">
+      <div className="mx-auto max-w-[620px] px-4 pb-24 sm:px-5">
         <header className="sticky top-3 z-50 mt-3 flex items-center justify-between rounded-[2rem] border border-white/15 bg-[#120A24]/90 px-5 py-4 backdrop-blur">
           <Link href="/" className="text-sm font-bold text-[#D4AF37]">
             ← Home
@@ -275,12 +275,12 @@ export default function UzbekistanClassicPage() {
             <p className="mt-3 text-xl font-semibold text-[#D4AF37]">
               8 giorni • 7 notti
             </p>
-            <p className="mt-4 text-lg text-pretty hyphens-auto leading-8 text-white/85">
+            <p className="mt-4 text-lg text-justify leading-8 text-white/85">
               Un viaggio di 8 giorni alla scoperta di Tashkent, Khiva, Bukhara,
               Gijduvan e Samarcanda, lungo l'antica Via della Seta.
             </p>
 
-            <p className="mt-4 text-lg text-pretty hyphens-auto leading-8 text-white/85">
+            <p className="mt-4 text-lg text-justify leading-8 text-white/85">
               Un itinerario tra città Patrimonio UNESCO, bazar storici, madrase
               e antiche tradizioni della Via della Seta, arricchito
               dall'autentica ospitalità uzbeka, dai sapori della cucina locale e
@@ -305,7 +305,7 @@ export default function UzbekistanClassicPage() {
             Scegli la data che preferisci
           </h2>
 
-          <p className="mt-4 text-pretty hyphens-auto leading-8 text-white/85">
+          <p className="mt-4 text-justify leading-8 text-white/85">
             Parti quando preferisci: tutte le date indicate sono partenze
             garantite.
           </p>
@@ -361,7 +361,7 @@ export default function UzbekistanClassicPage() {
             Scopri il percorso del viaggio
           </h2>
 
-          <p className="mt-3 text-pretty hyphens-auto leading-8 text-white/85">
+          <p className="mt-3 text-justify leading-8 text-white/85">
             Esplora le città che visiteremo durante il tour lungo la Via della
             Seta.
           </p>
@@ -384,14 +384,14 @@ export default function UzbekistanClassicPage() {
             L’essenza dell’Uzbekistan autentico
           </h2>
 
-          <p className="mt-4 text-pretty hyphens-auto leading-8 text-white/85">
+          <p className="mt-4 text-justify leading-8 text-white/85">
             Un itinerario che racchiude arte, cultura e accoglienza senza tempo:
             dalle città leggendarie della Via della Seta ai capolavori
             dell'architettura islamica, tra antiche tradizioni e autentica
             ospitalità uzbeka.
           </p>
 
-          <p className="mt-4 text-pretty hyphens-auto leading-8 text-white/85">
+          <p className="mt-4 text-justify leading-8 text-white/85">
             Il programma è indicativo e può subire variazioni in base agli
             operativi voli, alle condizioni locali, alla disponibilità dei
             servizi e all’organizzazione del viaggio.
@@ -417,7 +417,7 @@ export default function UzbekistanClassicPage() {
                   alt={item.title}
                   width={1200}
                   height={700}
-                  className="h-64 w-full object-cover sm:h-72"
+                  className="h-72 w-full object-cover"
                 />
 
                 <div className="px-6 py-6">
@@ -437,7 +437,7 @@ export default function UzbekistanClassicPage() {
                     </p>
                   )}
 
-                  <div className="mt-5 space-y-4 text-[17px] text-pretty hyphens-auto leading-8 text-white/85">
+                  <div className="mt-4 space-y-4 text-justify leading-8 text-white/80">
                     {item.text.split("\n\n").map((paragraph, index) => (
                       <p
                         key={index}
@@ -455,7 +455,7 @@ export default function UzbekistanClassicPage() {
                     href={dayMaps[item.mapCity]}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-7 inline-flex w-full items-center justify-center rounded-full bg-[#D4AF37] px-6 py-3.5 font-bold text-black transition hover:bg-[#f0ca55] sm:w-auto"
+                    className="mt-6 inline-flex rounded-full bg-[#D4AF37] px-6 py-3 font-bold text-black transition hover:bg-[#f0ca55]"
                   >
                     <FaMapMarkerAlt className="mr-2 h-5 w-5 shrink-0" />
                     Mappa del giorno
@@ -478,7 +478,7 @@ export default function UzbekistanClassicPage() {
             Oltre le città leggendarie della Via della Seta
           </p>
 
-          <p className="mt-4 text-pretty hyphens-auto leading-8 text-white/85">
+          <p className="mt-4 text-justify leading-8 text-white/85">
             Estensioni del Tour Classico pensate per chi desidera vivere un
             Uzbekistan ancora più autentico.
           </p>
@@ -543,7 +543,7 @@ Un'esperienza intensa e fuori dai percorsi tradizionali, tra memoria, natura est
                     {item.title}
                   </h3>
 
-                  <div className="mt-4 space-y-4 text-[17px] text-pretty hyphens-auto leading-8 text-white/85">
+                  <div className="mt-3 space-y-4 text-justify leading-8 text-white/80">
                     {item.text.split("\n\n").map((paragraph, index) => (
                       <p key={index}>{paragraph}</p>
                     ))}
@@ -554,7 +554,7 @@ Un'esperienza intensa e fuori dai percorsi tradizionali, tra memoria, natura est
                       item.message,
                     )}`}
                     target="_blank"
-                    className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-[#D4AF37] px-6 py-3.5 font-bold text-black transition hover:bg-[#f0ca55] sm:w-auto"
+                    className="mt-5 inline-flex rounded-full bg-[#D4AF37] px-6 py-3 font-bold text-black transition hover:bg-[#f0ca55]"
                   >
                     <FaWhatsapp className="mr-2 h-6 w-6 text-black" />
                     Chiedi informazioni
@@ -600,7 +600,7 @@ Un'esperienza intensa e fuori dai percorsi tradizionali, tra memoria, natura est
             Tutto quello che c&apos;è da sapere prima della partenza
           </h2>
 
-          <p className="mt-4 text-pretty hyphens-auto leading-8 text-white/85">
+          <p className="mt-4 text-justify leading-8 text-white/85">
             Alcune informazioni pratiche per organizzare al meglio il vostro
             viaggio in Uzbekistan.
           </p>
@@ -615,7 +615,7 @@ Un'esperienza intensa e fuori dai percorsi tradizionali, tra memoria, natura est
                 <FaChevronDown className="transition-transform duration-300 group-open:rotate-180" />
               </summary>
 
-              <p className="mt-5 text-pretty hyphens-auto leading-8 text-white/80">
+              <p className="mt-5 text-justify leading-8 text-white/80">
                 Per i cittadini italiani è necessario il passaporto con validità
                 residua di almeno <strong>6 mesi</strong> dalla data di rientro.
                 <br />
@@ -634,7 +634,7 @@ Un'esperienza intensa e fuori dai percorsi tradizionali, tra memoria, natura est
                 <FaChevronDown className="transition-transform duration-300 group-open:rotate-180" />
               </summary>
 
-              <p className="mt-5 text-pretty hyphens-auto leading-8 text-white/80">
+              <p className="mt-5 text-justify leading-8 text-white/80">
                 La valuta ufficiale è il <strong>Som uzbeko (UZS)</strong>.
                 <br />
                 <br />
@@ -657,7 +657,7 @@ Un'esperienza intensa e fuori dai percorsi tradizionali, tra memoria, natura est
                 <FaChevronDown className="transition-transform duration-300 group-open:rotate-180" />
               </summary>
 
-              <div className="mt-5 space-y-4 text-pretty hyphens-auto leading-8 text-white/80">
+              <div className="mt-5 space-y-4 text-justify leading-8 text-white/80">
                 <p>
                   Naviga in Internet fin dal tuo arrivo in Uzbekistan{" "}
                   <strong>senza costi di roaming</strong>.
@@ -705,7 +705,7 @@ Un'esperienza intensa e fuori dai percorsi tradizionali, tra memoria, natura est
                 <FaChevronDown className="transition-transform duration-300 group-open:rotate-180" />
               </summary>
 
-              <p className="mt-5 text-pretty hyphens-auto leading-8 text-white/80">
+              <p className="mt-5 text-justify leading-8 text-white/80">
                 Per i viaggiatori provenienti dall'Italia non sono previste
                 vaccinazioni obbligatorie.
                 <br />
@@ -726,7 +726,7 @@ Un'esperienza intensa e fuori dai percorsi tradizionali, tra memoria, natura est
                 <FaChevronDown className="transition-transform duration-300 group-open:rotate-180" />
               </summary>
 
-              <div className="mt-5 space-y-4 text-pretty hyphens-auto leading-8 text-white/80">
+              <div className="mt-5 space-y-4 text-justify leading-8 text-white/80">
                 <p>
                   Per viaggiare con maggiore serenità, Golden Terra Travel
                   consiglia di stipulare prima della partenza
@@ -791,7 +791,7 @@ Un'esperienza intensa e fuori dai percorsi tradizionali, tra memoria, natura est
                 <FaChevronDown className="transition-transform duration-300 group-open:rotate-180" />
               </summary>
 
-              <div className="mt-5 space-y-4 text-pretty hyphens-auto leading-8 text-white/80">
+              <div className="mt-5 space-y-4 text-justify leading-8 text-white/80">
                 <p>
                   L&apos;Uzbekistan ha un clima continentale, con estati calde e
                   secche, primavere e autunni piacevoli e inverni freddi.
@@ -856,7 +856,7 @@ Un'esperienza intensa e fuori dai percorsi tradizionali, tra memoria, natura est
                 <FaChevronDown className="transition-transform duration-300 group-open:rotate-180" />
               </summary>
 
-              <div className="mt-5 space-y-4 text-pretty hyphens-auto leading-8 text-white/80">
+              <div className="mt-5 space-y-4 text-justify leading-8 text-white/80">
                 <p>
                   In Uzbekistan la corrente elettrica è a{" "}
                   <strong>220 Volt / 50 Hz</strong>.
@@ -893,7 +893,7 @@ Un'esperienza intensa e fuori dai percorsi tradizionali, tra memoria, natura est
                 <FaChevronDown className="transition-transform duration-300 group-open:rotate-180" />
               </summary>
 
-              <p className="mt-5 text-pretty hyphens-auto leading-8 text-white/80">
+              <p className="mt-5 text-justify leading-8 text-white/80">
                 Tra le specialità della cucina uzbeka da non perdere:
                 <br />
                 <br />
@@ -921,7 +921,7 @@ Un'esperienza intensa e fuori dai percorsi tradizionali, tra memoria, natura est
                 <FaChevronDown className="transition-transform duration-300 group-open:rotate-180" />
               </summary>
 
-              <div className="mt-5 space-y-4 text-pretty hyphens-auto leading-8 text-white/80">
+              <div className="mt-5 space-y-4 text-justify leading-8 text-white/80">
                 <p>
                   Durante il viaggio è sempre consigliabile avere a portata di
                   mano i principali numeri di emergenza e i contatti del tour.
@@ -1014,7 +1014,7 @@ Un'esperienza intensa e fuori dai percorsi tradizionali, tra memoria, natura est
                 <FaChevronDown className="transition-transform duration-300 group-open:rotate-180" />
               </summary>
 
-              <div className="mt-5 space-y-4 text-pretty hyphens-auto leading-8 text-white/80">
+              <div className="mt-5 space-y-4 text-justify leading-8 text-white/80">
                 <p>
                   Per vivere il viaggio in totale comfort, ti consigliamo di
                   preparare una valigia pratica e adatta alle diverse condizioni
@@ -1099,7 +1099,7 @@ Un'esperienza intensa e fuori dai percorsi tradizionali, tra memoria, natura est
             Vuoi ricevere il programma?
           </h2>
 
-          <p className="mt-4 text-pretty hyphens-auto leading-8 text-white/80">
+          <p className="mt-4 text-justify leading-8 text-white/80">
             Prima della partenza sarete seguiti dal nostro staff in Italia.
             Durante il viaggio potrete contare anche sull'assistenza diretta del
             nostro team in Uzbekistan.
