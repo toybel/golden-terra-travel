@@ -617,7 +617,7 @@ Un'esperienza intensa e fuori dai percorsi tradizionali, tra memoria, natura est
 
               <p className="mt-5 text-justify leading-8 text-white/80">
                 Per i cittadini italiani è necessario il passaporto con validità
-                residua di almeno <strong>6 mesi</strong> dalla data di rientro.
+                residua di almeno <strong>3 mesi</strong> dalla data di rientro.
                 <br />
                 <br />
                 Per soggiorni turistici in Uzbekistan non è richiesto il visto
