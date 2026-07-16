@@ -19,6 +19,16 @@ export const en = {
     discoverTours: "Discover Tours",
     contactUs: "Contact Us",
   },
+  install: {
+    label: "OFFICIAL APP",
+    title: "Take Uzbekistan with you",
+    text: "Install Golden Terra Travel for free on your phone and access itineraries, departures and travel updates anytime.",
+    button: "📲 Install the App",
+    iosInstructions:
+      'Open Safari, tap Share and choose "Add to Home Screen".',
+    browserInstructions:
+      'Open the browser menu and choose "Install app" or "Add to Home screen".',
+  },
   event: {
     label: "2026 EVENT",
     intro: "✨ Meet us at",
@@ -45,15 +55,15 @@ export const en = {
     title: "Discover Uzbekistan with us",
   },
   tours: [
- {
-  title: "Classic Uzbekistan",
-  text: "The ideal itinerary for discovering the iconic cities of the Silk Road.",
-  image: "/tours/uzbekistan-classic.jpg",
-  variant: "classic",
-  href: "/en/itinerari/uzbekistan-classic",
-  buttonLabel: "View itinerary",
-  external: false,
-},
+    {
+      title: "Classic Uzbekistan",
+      text: "The ideal itinerary for discovering the iconic cities of the Silk Road.",
+      image: "/tours/uzbekistan-classic.jpg",
+      variant: "classic",
+      href: "/en/itinerari/uzbekistan-classic",
+      buttonLabel: "View itinerary",
+      external: false,
+    },
     {
       title: "New Year on the Silk Road 2026",
       text: "Celebrate New Year in the heart of the Silk Road with a special journey through legendary cities, unforgettable atmospheres and Uzbek traditions.",
@@ -66,7 +76,7 @@ export const en = {
     {
       title: "Easter & Navruz in Uzbekistan 2027",
       text: "During the most fascinating season of the year, when the almond trees are in bloom and Uzbekistan celebrates Navruz, we will guide you through the wonders of the Silk Road.",
-      image: "/tours/navruz-en.png",
+      image: "/tours/navruz-en.jpg",
       variant: "poster",
       href: "https://wa.me/393475218989?text=Hello,%20I%20would%20like%20to%20receive%20the%20Easter%20and%20Navruz%20Uzbekistan%202027%20programme.",
       buttonLabel: "Request the programme",

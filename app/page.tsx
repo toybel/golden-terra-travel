@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import {
   FaFacebookF,
   FaInstagram,
@@ -21,7 +21,39 @@ type Language = "it" | "en";
 
 export default function Home() {
   const [language, setLanguage] = useState<Language>("it");
+  const [installPrompt, setInstallPrompt] = useState<any>(null);
   const t = language === "it" ? it : en;
+
+  useEffect(() => {
+    const handler = (event: Event) => {
+      event.preventDefault();
+      setInstallPrompt(event);
+    };
+
+    window.addEventListener("beforeinstallprompt", handler);
+
+    return () => {
+      window.removeEventListener("beforeinstallprompt", handler);
+    };
+  }, []);
+
+  const handleInstallApp = async () => {
+    if (installPrompt) {
+      await installPrompt.prompt();
+      await installPrompt.userChoice;
+      setInstallPrompt(null);
+      return;
+    }
+
+    const isIos = /iphone|ipad|ipod/i.test(navigator.userAgent);
+
+    if (isIos) {
+      alert(t.install.iosInstructions);
+      return;
+    }
+
+    alert(t.install.browserInstructions);
+  };
 
   return (
     <main className="min-h-screen bg-[#080414] text-white">
@@ -136,6 +168,32 @@ export default function Home() {
                 {t.hero.contactUs}
               </a>
             </div>
+          </div>
+        </section>
+
+        <section className="mt-5 rounded-[2rem] border border-[#D4AF37]/30 bg-[#16072F] p-6 text-center">
+          <p className="text-xs tracking-[0.35em] text-[#D4AF37]">
+            {t.install.label}
+          </p>
+
+          <div className="mt-4 text-5xl">📱</div>
+
+          <h2 className="mt-4 text-3xl font-bold">
+            {t.install.title}
+          </h2>
+
+          <p className="mt-4 leading-7 text-white/75">
+            {t.install.text}
+          </p>
+
+          <div className="mt-7 flex justify-center">
+            <button
+              type="button"
+              onClick={handleInstallApp}
+              className="rounded-full bg-[#D4AF37] px-6 py-3 font-semibold text-[#120A24] transition hover:scale-105"
+            >
+              {t.install.button}
+            </button>
           </div>
         </section>
 

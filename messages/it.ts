@@ -19,6 +19,16 @@ export const it = {
     discoverTours: "Scopri i Tour",
     contactUs: "Contattaci",
   },
+  install: {
+    label: "APP UFFICIALE",
+    title: "Porta l'Uzbekistan sempre con te",
+    text: "Installa gratuitamente Golden Terra Travel sul tuo telefono e consulta itinerari, partenze e novità in qualsiasi momento.",
+    button: "📲 Installa l'App",
+    iosInstructions:
+      'Apri Safari, tocca Condividi e scegli "Aggiungi alla schermata Home".',
+    browserInstructions:
+      'Apri il menu del browser e scegli "Installa app" oppure "Aggiungi alla schermata Home".',
+  },
   event: {
     label: "EVENTO 2026",
     intro: "✨ Saremo al",
