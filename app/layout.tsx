@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -14,7 +15,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="it" className="h-full antialiased">
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+
+        {process.env.NODE_ENV === "production" && (
+          <Script id="register-service-worker" strategy="afterInteractive">
+            {`
+              if ("serviceWorker" in navigator) {
+                navigator.serviceWorker
+                  .register("/sw.js")
+                  .catch((error) => {
+                    console.error("Service worker non registrato:", error);
+                  });
+              }
+            `}
+          </Script>
+        )}
+      </body>
     </html>
   );
 }
