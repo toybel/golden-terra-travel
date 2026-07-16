@@ -57,7 +57,7 @@ export const en = {
     {
       title: "New Year on the Silk Road 2026",
       text: "Celebrate New Year in the heart of the Silk Road with a special journey through legendary cities, unforgettable atmospheres and Uzbek traditions.",
-      image: "/tours/capodanno.png",
+      image: "/tours/capodanno-en.png",
       variant: "poster",
       href: "https://wa.me/393475218989?text=Hello,%20I%20would%20like%20to%20receive%20the%20New%20Year%20Uzbekistan%202027%20programme.",
       buttonLabel: "Request the programme",
