@@ -345,7 +345,7 @@ export default function UzbekistanClassicPage() {
         </section>
         <section className="mt-6 grid grid-cols-2 gap-4">
           <Image
-            src="/itinerari/uzbekistan-classic/ospitalita.jpg"
+            src="/itinerari/uzbekistan-classic/ospitalita-en.jpg"
             alt="Uzbek hospitality"
             width={700}
             height={1000}
@@ -353,7 +353,7 @@ export default function UzbekistanClassicPage() {
           />
 
           <Image
-            src="/itinerari/uzbekistan-classic/sapori.jpg"
+            src="/itinerari/uzbekistan-classic/sapori-en.jpg"
             alt="Flavours of Uzbekistan"
             width={700}
             height={1000}

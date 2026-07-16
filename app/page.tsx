@@ -274,12 +274,16 @@ export default function Home() {
           <p className="text-xs tracking-[0.35em] text-[#D4AF37]">{t.team.label}</p>
           <div className="mt-5 overflow-hidden rounded-[1.75rem] border border-white/15 bg-[#0F0620]">
             <Image
-              src="/team/shukhrat-silvia.jpg"
-              alt="Shukhrat and Silvia"
-              width={900}
-              height={1350}
-              className="h-auto w-full rounded-[2rem]"
-            />
+  src={
+    language === "it"
+      ? "/team/shukhrat-silvia.jpg"
+      : "/team/shukhrat-silvia-en.jpg"
+  }
+  alt="Shukhrat and Silvia"
+  width={900}
+  height={1350}
+  className="h-auto w-full rounded-[2rem]"
+/>
             <div className="p-5">
               <h2 className="text-3xl font-bold">{t.team.title}</h2>
               <p className="mt-3 text-white/75">{t.team.text}</p>
