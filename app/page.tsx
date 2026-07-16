@@ -1,6 +1,7 @@
-import Image from "next/image";
-import { Fragment } from "react";
+"use client";
 
+import Image from "next/image";
+import { Fragment, useState } from "react";
 import {
   FaFacebookF,
   FaInstagram,
@@ -12,57 +13,16 @@ import {
   FaGlobe,
   FaHandshake,
 } from "react-icons/fa";
-const tours = [
-  {
-    title: "Uzbekistan Classico",
-    text: "L'itinerario ideale per scoprire le città simbolo della Via della Seta.",
-    image: "/tours/uzbekistan-classic.jpg",
-    variant: "classic",
-    href: "/itinerari/uzbekistan-classic",
-    buttonLabel: "Vedi l'itinerario",
-  },
-  {
-    title: "Capodanno sulla Via della Seta 2026",
-    text: "Festeggia il Capodanno nel cuore della Via della Seta con un viaggio speciale tra città leggendarie, atmosfere indimenticabili e tradizioni uzbeke.",
-    image: "/tours/capodanno.png",
-    variant: "poster",
-    href: "https://wa.me/393475218989?text=Buongiorno,%20vorrei%20ricevere%20il%20programma%20di%20Capodanno%20Uzbekistan%202027.",
-    buttonLabel: "Richiedi il programma",
-    external: true,
-  },
-  {
-    title: "Pasqua & Navruz in Uzbekistan 2027",
-    text: "Nel periodo più affascinante dell'anno, quando i mandorli sono in fiore e l'Uzbekistan celebra il Navruz, vi accompagneremo alla scoperta delle meraviglie della Via della Seta.",
-    image: "/tours/navruz.jpg",
-    variant: "poster",
-    href: "https://wa.me/393475218989?text=Buongiorno,%20vorrei%20ricevere%20il%20programma%20di%20Pasqua%20%26%20Navruz%20Uzbekistan%202027.",
-    buttonLabel: "Richiedi il programma",
-    external: true,
-  },
-];
 
-const guaranteedDepartures = [
-  "5 Agosto",
-  "18 Agosto",
-  "6 Settembre",
-  "17 Settembre",
-  "19 Ottobre",
-  "21 Ottobre",
-  "3 Novembre",
-  "7 Novembre",
-  "29 Dicembre",
-  "20 Marzo",
-  "13 Maggio",
-];
+import { it } from "../messages/it";
+import { en } from "../messages/en";
 
-const contacts = [
-  { label: "WhatsApp Italia", href: "https://wa.me/393475218989" },
-  { label: "WhatsApp Uzbekistan", href: "https://wa.me/998977181870" },
-  { label: "Email", href: "mailto:info@goldenterratravel.com" },
-  { label: "Website", href: "https://www.goldenterratravel.com" },
-];
+type Language = "it" | "en";
 
 export default function Home() {
+  const [language, setLanguage] = useState<Language>("it");
+  const t = language === "it" ? it : en;
+
   return (
     <main className="min-h-screen bg-[#080414] text-white">
       <div className="mx-auto max-w-[620px] px-4 pb-24">
@@ -76,147 +36,127 @@ export default function Home() {
               className="h-16 w-auto object-contain sm:h-20"
             />
             <div>
-              <p className="text-sm font-bold tracking-[0.28em]">
-                GOLDEN TERRA TRAVEL LLC
-              </p>
+              <p className="text-sm font-bold tracking-[0.28em]">{t.brand.name}</p>
               <p className="text-[10px] tracking-[0.28em] text-white/80">
-                TOUR OPERATOR & DMC IN UZBEKISTAN
+                {t.brand.subtitle}
               </p>
             </div>
           </div>
 
-          <div className="flex gap-3 rounded-full bg-white/10 px-4 py-2 text-xs font-bold">
-            <button>IT</button>
-            <button>EN</button>
+          <div className="flex gap-1 rounded-full bg-white/10 p-1 text-xs font-bold">
+            <button
+              type="button"
+              onClick={() => setLanguage("it")}
+              aria-pressed={language === "it"}
+              className={`rounded-full px-3 py-2 transition ${
+                language === "it"
+                  ? "bg-[#D4AF37] text-black"
+                  : "text-white/70 hover:text-white"
+              }`}
+            >
+              {t.language.it}
+            </button>
+            <button
+              type="button"
+              onClick={() => setLanguage("en")}
+              aria-pressed={language === "en"}
+              className={`rounded-full px-3 py-2 transition ${
+                language === "en"
+                  ? "bg-[#D4AF37] text-black"
+                  : "text-white/70 hover:text-white"
+              }`}
+            >
+              {t.language.en}
+            </button>
           </div>
         </header>
 
-        <section className="mt-4 overflow-hidden rounded-[2rem] border border-[#6800C8]/50 bg-[#16072F]">
-          <Image
-            src="/hero/hero-home.jpg"
-            alt="Uzbekistan"
-            width={1200}
-            height={900}
-            priority
-            className="h-[280px] sm:h-[360px] md:h-[470px] w-full object-cover object-top rounded-[2rem]"
-          />
+       <section className="mt-4 overflow-hidden rounded-[2rem] border border-[#6800C8]/50 bg-[#16072F]">
+  <Image
+    src={
+      language === "it"
+        ? "/hero/hero-home.jpg"
+        : "/hero/hero-home-en.jpg"
+    }
+    alt="Uzbekistan"
+    width={1200}
+    height={900}
+    priority
+    className="h-[280px] w-full rounded-[2rem] object-cover object-top sm:h-[360px] md:h-[470px]"
+  />
 
           <div className="px-7 py-10 text-center">
-            <h1 className="text-4xl font-bold tracking-tight">
-              Golden Terra Travel LLC
-            </h1>
+            <h1 className="text-4xl font-bold tracking-tight">{t.hero.title}</h1>
+            <p className="mt-2 text-sm text-white/80">{t.hero.subtitle}</p>
 
-            <p className="mt-2 text-sm text-white/80">
-              Tour Operator & DMC in Uzbekistan
-            </p>
+            <div className="mt-8 grid gap-4 text-center">
+              <div className="rounded-[1.5rem] border border-white/5 bg-white/[0.04] px-5 py-4">
+                <FaMapMarkedAlt className="mx-auto text-4xl text-[#D4AF37]" />
+                <h3 className="mt-3 text-lg font-semibold text-white">
+                  {t.hero.authenticTitle}
+                </h3>
+                <p className="mt-1 text-sm text-white/75">{t.hero.authenticText}</p>
+              </div>
 
-          <div className="mt-8 grid gap-4 text-center">
-  <div className="rounded-[1.5rem] border border-white/5 bg-white/[0.04] px-5 py-4">
-    <FaMapMarkedAlt className="mx-auto text-4xl text-[#D4AF37]" />
+              <div className="rounded-[1.5rem] border border-white/5 bg-white/[0.04] px-5 py-4">
+                <FaGlobe className="mx-auto text-4xl text-[#D4AF37]" />
+                <h3 className="mt-3 text-lg font-semibold text-white">
+                  {t.hero.guidesTitle}
+                </h3>
+                <div className="mt-3 flex flex-wrap justify-center gap-x-4 gap-y-2 text-sm text-white/75">
+                  <span>🇮🇹 Italiano</span>
+                  <span>🇬🇧 English</span>
+                  <span>🇫🇷 Français</span>
+                  <span>🇩🇪 Deutsch</span>
+                  <span>🇪🇸 Español</span>
+                  <span>🇷🇺 Русский</span>
+                </div>
+              </div>
 
-    <h3 className="mt-3 text-lg font-semibold text-white">
-      Viaggi autentici 
-    </h3>
-
-    <p className="mt-1 text-sm text-white/75">
-      Oltre le città leggendarie della Via della Seta
-    </p>
-  </div>
-
-  <div className="rounded-[1.5rem] border border-white/5 bg-white/[0.04] px-5 py-4">
-    <FaGlobe className="mx-auto text-4xl text-[#D4AF37]" />
-
-    <h3 className="mt-3 text-lg font-semibold text-white">
-      Guide locali professionali
-    </h3>
-
-    <div className="mt-3 flex flex-wrap justify-center gap-x-4 gap-y-2 text-sm text-white/75">
-      <span>🇮🇹 Italiano</span>
-      <span>🇬🇧 English</span>
-      <span>🇫🇷 Français</span>
-      <span>🇩🇪 Deutsch</span>
-      <span>🇪🇸 Español</span>
-      <span>🇷🇺 Русский</span>
-    </div>
-  </div>
-
-  <div className="rounded-[1.5rem] border border-white/5 bg-white/[0.04] px-5 py-4">
-    <FaHandshake className="mx-auto text-4xl text-[#D4AF37]" />
-
-    <h3 className="mt-3 text-lg font-semibold text-white">
-      Assistenza dedicata
-    </h3>
-
-    <p className="mt-1 text-sm text-white/75">
-      Prima, durante e dopo il viaggio.
-    </p>
-  </div>
-</div>
+              <div className="rounded-[1.5rem] border border-white/5 bg-white/[0.04] px-5 py-4">
+                <FaHandshake className="mx-auto text-4xl text-[#D4AF37]" />
+                <h3 className="mt-3 text-lg font-semibold text-white">
+                  {t.hero.assistanceTitle}
+                </h3>
+                <p className="mt-1 text-sm text-white/75">{t.hero.assistanceText}</p>
+              </div>
+            </div>
 
             <div className="mt-9 flex justify-center gap-4">
               <a
                 href="#tours"
                 className="rounded-full bg-[#D4AF37] px-7 py-4 text-sm font-bold text-black"
               >
-                Scopri i Tour
+                {t.hero.discoverTours}
               </a>
               <a
                 href="#contact"
                 className="rounded-full border border-white/20 bg-white/10 px-7 py-4 text-sm font-bold"
               >
-                Contattaci
+                {t.hero.contactUs}
               </a>
             </div>
           </div>
         </section>
 
         <section className="mt-5 rounded-[1.75rem] border border-[#D4AF37]/30 bg-[#16072F] px-6 py-7 text-center">
-  <p className="text-xs tracking-[0.35em] text-[#D4AF37]">
-    EVENTO 2026
-  </p>
-
-  <p className="mt-4 text-lg text-white/80">
-    ✨ Saremo al
-  </p>
-
-  <h2 className="mt-2 text-3xl font-bold text-white">
-    TTG Travel Experience
-  </h2>
-
-  <p className="mt-4 text-lg font-semibold text-[#D4AF37]">
-    14–16 ottobre 2026
-  </p>
-
-  <p className="mt-2 text-white/70">
-    Rimini Expo Centre
-  </p>
-
-  <div className="mt-5 rounded-xl border border-dashed border-[#D4AF37]/40 bg-white/5 px-4 py-3">
-    <p className="text-sm text-white/80">
-      📍 Padiglione e stand saranno comunicati prossimamente.
-    </p>
-  </div>
-
-  <p className="mt-5 text-sm text-white/80">
-    Ti aspettiamo a Rimini. Vieni a conoscere Golden Terra Travel.
-  </p>
-</section>
+          <p className="text-xs tracking-[0.35em] text-[#D4AF37]">{t.event.label}</p>
+          <p className="mt-4 text-lg text-white/80">{t.event.intro}</p>
+          <h2 className="mt-2 text-3xl font-bold text-white">{t.event.title}</h2>
+          <p className="mt-4 text-lg font-semibold text-[#D4AF37]">{t.event.date}</p>
+          <p className="mt-2 text-white/70">{t.event.place}</p>
+          <div className="mt-5 rounded-xl border border-dashed border-[#D4AF37]/40 bg-white/5 px-4 py-3">
+            <p className="text-sm text-white/80">{t.event.stand}</p>
+          </div>
+          <p className="mt-5 text-sm text-white/80">{t.event.closing}</p>
+        </section>
 
         <section className="mt-6 rounded-[2rem] border border-white/15 bg-[#16072F] p-6">
-          <p className="text-xs tracking-[0.35em] text-[#D4AF37]">
-            I NOSTRI PUNTI DI FORZA
-          </p>
-          <h2 className="mt-4 text-3xl font-bold">PERCHÉ VIAGGIARE CON NOI</h2>
+          <p className="text-xs tracking-[0.35em] text-[#D4AF37]">{t.strengths.label}</p>
+          <h2 className="mt-4 text-3xl font-bold">{t.strengths.title}</h2>
 
           <div className="mt-6 grid grid-cols-1 gap-4">
-            {[
-              "Tour Operator & DMC autorizzato in Uzbekistan",
-              "Guide locali professionali parlanti italiano",
-              "Tour individuali, di gruppo e su misura",
-              "Esperienze autentiche in tutto l'Uzbekistan",
-              "Assistenza internazionale con referente italiana, prima, durante e dopo il viaggio.",
-              "Organizzazione completa dall'arrivo alla partenza",
-            ].map((item) => (
+            {t.strengths.items.map((item) => (
               <div
                 key={item}
                 className="rounded-2xl border border-white/15 bg-white/5 px-5 py-4 font-semibold"
@@ -233,18 +173,14 @@ export default function Home() {
           className="mt-6 rounded-[2rem] border border-white/15 bg-[#16072F] p-6"
         >
           <p className="text-xs tracking-[0.35em] text-[#D4AF37]">
-            I NOSTRI TOUR
+            {t.toursSection.label}
           </p>
-
-          <h2 className="mt-4 text-3xl font-bold">
-            Parti alla scoperta dell'Uzbekistan
-          </h2>
+          <h2 className="mt-4 text-3xl font-bold">{t.toursSection.title}</h2>
 
           <div className="mt-8 space-y-8">
-            {tours.map((tour, index) => (
+            {t.tours.map((tour, index) => (
               <Fragment key={tour.title}>
                 <a
-                  key={tour.title}
                   href={tour.href}
                   target={tour.external ? "_blank" : undefined}
                   rel={tour.external ? "noopener noreferrer" : undefined}
@@ -265,26 +201,16 @@ export default function Home() {
                       <div className="p-6 md:p-7">
                         <h3 className="text-2xl font-bold">{tour.title}</h3>
 
-                        {tour.title.includes("Navruz") ? (
+                        {index === 2 ? (
                           <>
-                            <p className="mt-4 leading-7 text-white/80">
-                              Nel periodo più affascinante dell&apos;anno, quando i mandorli
-                              sono in fiore e l&apos;Uzbekistan celebra il Navruz, vi
-                              accompagneremo alla scoperta delle meraviglie della Via
-                              della Seta.
-                            </p>
-
+                            <p className="mt-4 leading-7 text-white/80">{t.navruz.intro}</p>
                             <div className="mt-5 space-y-2 font-semibold text-white/90">
-                              <p>✨ Samarcanda</p>
-                              <p>✨ Bukhara</p>
-                              <p>✨ Khiva</p>
-                              <p>✨ Tashkent</p>
-                              <p>✨ Parco Nazionale Ugam-Chatkal</p>
+                              {t.navruz.places.map((place) => (
+                                <p key={place}>✨ {place}</p>
+                              ))}
                             </div>
-
                             <p className="mt-5 leading-7 text-white/75">
-                              Un viaggio tra città leggendarie, tradizioni millenarie,
-                              colori, profumi e paesaggi primaverili unici.
+                              {t.navruz.closing}
                             </p>
                           </>
                         ) : (
@@ -319,25 +245,20 @@ export default function Home() {
                 {index === 0 && (
                   <section className="rounded-[2rem] border border-white/15 bg-[#16072F] p-6">
                     <p className="text-xs tracking-[0.35em] text-[#D4AF37]">
-                      PARTENZE GARANTITE 2026-2027
+                      {t.departures.label}
                     </p>
-
-                    <h2 className="mt-4 text-3xl font-bold">
-                      Le nostre prossime partenze
-                    </h2>
-
+                    <h2 className="mt-4 text-3xl font-bold">{t.departures.title}</h2>
                     <p className="mt-4 leading-relaxed text-white/80">
-                      Tutte le date indicate sono partenze garantite. Scegli il
-                      periodo più adatto per vivere l&apos;Uzbekistan con noi.
+                      {t.departures.text}
                     </p>
 
                     <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
-                      {guaranteedDepartures.map((date) => (
+                      {t.departures.dates.map((date) => (
                         <div
                           key={date}
                           className="flex items-center justify-center gap-3 whitespace-nowrap rounded-2xl border border-white/15 bg-white/5 px-5 py-4 text-center font-semibold transition-all duration-300 hover:-translate-y-1 hover:border-[#D4AF37] hover:bg-white/10"
                         >
-                          <FaCalendarCheck className="text-[#D4AF37] shrink-0" />
+                          <FaCalendarCheck className="shrink-0 text-[#D4AF37]" />
                           {date}
                         </div>
                       ))}
@@ -350,88 +271,48 @@ export default function Home() {
         </section>
 
         <section className="mt-6 rounded-[2rem] border border-white/15 bg-[#16072F] p-6">
-          <p className="text-xs tracking-[0.35em] text-[#D4AF37]">TEAM</p>
-
+          <p className="text-xs tracking-[0.35em] text-[#D4AF37]">{t.team.label}</p>
           <div className="mt-5 overflow-hidden rounded-[1.75rem] border border-white/15 bg-[#0F0620]">
             <Image
               src="/team/shukhrat-silvia.jpg"
               alt="Shukhrat and Silvia"
               width={900}
               height={1350}
-              className="w-full h-auto rounded-[2rem]"
+              className="h-auto w-full rounded-[2rem]"
             />
             <div className="p-5">
-              <h2 className="text-3xl font-bold">Shukhrat & Silvia</h2>
-              <p className="mt-3 text-white/75">
-                Un team italo-uzbeko che vi accompagna con competenza e passione
-                prima, durante e dopo ogni viaggio.
-              </p>
+              <h2 className="text-3xl font-bold">{t.team.title}</h2>
+              <p className="mt-3 text-white/75">{t.team.text}</p>
             </div>
           </div>
         </section>
 
-
         <section className="mt-6 rounded-[2rem] border border-white/15 bg-[#16072F] p-6">
           <p className="text-center text-xs tracking-[0.35em] text-[#D4AF37]">
-            SEGUICI
+            {t.social.label}
           </p>
-          <h2 className="mt-3 text-center text-3xl font-bold">
-            Rimani in contatto con noi
-          </h2>
-          <p className="mt-3 text-center text-white/70">
-            Scopri foto, video e novità lungo la Via della Seta.
-          </p>
+          <h2 className="mt-3 text-center text-3xl font-bold">{t.social.title}</h2>
+          <p className="mt-3 text-center text-white/70">{t.social.text}</p>
 
           <div className="mt-8 flex items-center justify-center gap-4">
-            <a
-              href="https://www.facebook.com/viadellasetauzbekistan"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-              className="flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-white/5 text-xl text-white transition hover:border-[#D4AF37] hover:text-[#D4AF37]"
-            >
-              <FaFacebookF />
-            </a>
-
-            <a
-              href="https://www.instagram.com/viaggiare_in_uzbekistan/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-              className="flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-white/5 text-xl text-white transition hover:border-[#D4AF37] hover:text-[#D4AF37]"
-            >
-              <FaInstagram />
-            </a>
-
-            <a
-              href="https://t.me/GoldenTerraTravel"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Telegram"
-              className="flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-white/5 text-xl text-white transition hover:border-[#D4AF37] hover:text-[#D4AF37]"
-            >
-              <FaTelegramPlane />
-            </a>
-
-            <a
-              href="https://www.tiktok.com/@viadellasetauzbekistan?_t=8lFjOD0Uwsq&_r=1"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="TikTok"
-              className="flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-white/5 text-xl text-white transition hover:border-[#D4AF37] hover:text-[#D4AF37]"
-            >
-              <FaTiktok />
-            </a>
-
-            <a
-              href="https://www.youtube.com/@goldenterratravelviaggiare2861"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="YouTube"
-              className="flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-white/5 text-xl text-white transition hover:border-[#D4AF37] hover:text-[#D4AF37]"
-            >
-              <FaYoutube />
-            </a>
+            {[
+              ["https://www.facebook.com/viadellasetauzbekistan", "Facebook", <FaFacebookF key="fb" />],
+              ["https://www.instagram.com/viaggiare_in_uzbekistan/", "Instagram", <FaInstagram key="ig" />],
+              ["https://t.me/GoldenTerraTravel", "Telegram", <FaTelegramPlane key="tg" />],
+              ["https://www.tiktok.com/@viadellasetauzbekistan?_t=8lFjOD0Uwsq&_r=1", "TikTok", <FaTiktok key="tt" />],
+              ["https://www.youtube.com/@goldenterratravelviaggiare2861", "YouTube", <FaYoutube key="yt" />],
+            ].map(([href, label, icon]) => (
+              <a
+                key={String(label)}
+                href={String(href)}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={String(label)}
+                className="flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-white/5 text-xl text-white transition hover:border-[#D4AF37] hover:text-[#D4AF37]"
+              >
+                {icon}
+              </a>
+            ))}
           </div>
         </section>
 
@@ -439,15 +320,16 @@ export default function Home() {
           id="contact"
           className="mt-6 rounded-[2rem] border border-white/15 bg-[#16072F] p-6"
         >
-          <p className="text-xs tracking-[0.35em] text-[#D4AF37]">CONTATTI</p>
-          <h2 className="mt-4 text-3xl font-bold">Siamo a tua disposizione</h2>
+          <p className="text-xs tracking-[0.35em] text-[#D4AF37]">{t.contacts.label}</p>
+          <h2 className="mt-4 text-3xl font-bold">{t.contacts.title}</h2>
 
           <div className="mt-6 grid grid-cols-1 gap-4">
-            {contacts.map((contact) => (
+            {t.contacts.items.map((contact) => (
               <a
                 key={contact.label}
                 href={contact.href}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="rounded-2xl border border-white/15 bg-white/5 px-5 py-4 font-bold"
               >
                 {contact.label}
@@ -459,9 +341,9 @@ export default function Home() {
 
       <nav className="fixed bottom-0 left-0 right-0 z-50 mx-auto max-w-[620px] rounded-t-[2rem] border border-white/15 bg-[#120A24]/95 px-6 py-4 backdrop-blur">
         <div className="flex justify-between text-xs text-white/80">
-          <a href="#">Home</a>
-          <a href="#tours">Tours</a>
-          <a href="#contact">Contact</a>
+          <a href="#">{t.bottomNav.home}</a>
+          <a href="#tours">{t.bottomNav.tours}</a>
+          <a href="#contact">{t.bottomNav.contact}</a>
         </div>
       </nav>
     </main>

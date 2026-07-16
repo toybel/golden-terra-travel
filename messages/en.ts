@@ -1,0 +1,115 @@
+export const en = {
+  locale: "en",
+  language: {
+    it: "IT",
+    en: "EN",
+  },
+  brand: {
+    name: "GOLDEN TERRA TRAVEL LLC",
+    subtitle: "TOUR OPERATOR & DMC IN UZBEKISTAN",
+  },
+  hero: {
+    title: "Golden Terra Travel LLC",
+    subtitle: "Tour Operator & DMC in Uzbekistan",
+    authenticTitle: "Authentic journeys",
+    authenticText: "Beyond the legendary cities of the Silk Road",
+    guidesTitle: "Professional local guides",
+    assistanceTitle: "Dedicated assistance",
+    assistanceText: "Before, during and after your journey.",
+    discoverTours: "Discover Tours",
+    contactUs: "Contact Us",
+  },
+  event: {
+    label: "2026 EVENT",
+    intro: "✨ Meet us at",
+    title: "TTG Travel Experience",
+    date: "14–16 October 2026",
+    place: "Rimini Expo Centre",
+    stand: "📍 Hall and stand details will be announced soon.",
+    closing: "We look forward to meeting you in Rimini. Come and discover Golden Terra Travel.",
+  },
+  strengths: {
+    label: "OUR STRENGTHS",
+    title: "WHY TRAVEL WITH US",
+    items: [
+      "Licensed Tour Operator & DMC in Uzbekistan",
+      "Professional local English-speaking guides",
+      "Private, group and tailor-made tours",
+      "Authentic experiences throughout Uzbekistan",
+      "International assistance before, during and after your journey",
+      "Complete organisation from arrival to departure",
+    ],
+  },
+  toursSection: {
+    label: "OUR TOURS",
+    title: "Discover Uzbekistan with us",
+  },
+  tours: [
+    {
+      title: "Classic Uzbekistan",
+      text: "The ideal itinerary for discovering the iconic cities of the Silk Road.",
+      image: "/tours/uzbekistan-classic.jpg",
+      variant: "classic",
+      href: "/itinerari/uzbekistan-classic",
+      buttonLabel: "View itinerary",
+      external: false,
+    },
+    {
+      title: "New Year on the Silk Road 2026",
+      text: "Celebrate New Year in the heart of the Silk Road with a special journey through legendary cities, unforgettable atmospheres and Uzbek traditions.",
+      image: "/tours/capodanno.png",
+      variant: "poster",
+      href: "https://wa.me/393475218989?text=Hello,%20I%20would%20like%20to%20receive%20the%20New%20Year%20Uzbekistan%202027%20programme.",
+      buttonLabel: "Request the programme",
+      external: true,
+    },
+    {
+      title: "Easter & Navruz in Uzbekistan 2027",
+      text: "During the most fascinating season of the year, when the almond trees are in bloom and Uzbekistan celebrates Navruz, we will guide you through the wonders of the Silk Road.",
+      image: "/tours/navruz.jpg",
+      variant: "poster",
+      href: "https://wa.me/393475218989?text=Hello,%20I%20would%20like%20to%20receive%20the%20Easter%20and%20Navruz%20Uzbekistan%202027%20programme.",
+      buttonLabel: "Request the programme",
+      external: true,
+    },
+  ],
+  navruz: {
+    intro: "During the most fascinating season of the year, when the almond trees are in bloom and Uzbekistan celebrates Navruz, we will guide you through the wonders of the Silk Road.",
+    places: ["Samarkand", "Bukhara", "Khiva", "Tashkent", "Ugam-Chatkal National Park"],
+    closing: "A journey through legendary cities, ancient traditions, colours, fragrances and unique spring landscapes.",
+  },
+  departures: {
+    label: "GUARANTEED DEPARTURES 2026-2027",
+    title: "Our upcoming departures",
+    text: "All listed dates are guaranteed departures. Choose the best time to experience Uzbekistan with us.",
+    dates: [
+      "5 August", "18 August", "6 September", "17 September", "19 October",
+      "21 October", "3 November", "7 November", "29 December", "20 March", "13 May"
+    ],
+  },
+  team: {
+    label: "TEAM",
+    title: "Shukhrat & Silvia",
+    text: "An Italian-Uzbek team supporting you with expertise and passion before, during and after every journey.",
+  },
+  social: {
+    label: "FOLLOW US",
+    title: "Stay connected with us",
+    text: "Discover photos, videos and news from along the Silk Road.",
+  },
+  contacts: {
+    label: "CONTACTS",
+    title: "We are here to help",
+    items: [
+      { label: "WhatsApp Italy", href: "https://wa.me/393475218989" },
+      { label: "WhatsApp Uzbekistan", href: "https://wa.me/998977181870" },
+      { label: "Email", href: "mailto:info@goldenterratravel.com" },
+      { label: "Website", href: "https://www.goldenterratravel.com" },
+    ],
+  },
+  bottomNav: {
+    home: "Home",
+    tours: "Tours",
+    contact: "Contact",
+  },
+} as const;

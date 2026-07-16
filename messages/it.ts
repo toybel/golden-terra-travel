@@ -1,0 +1,115 @@
+export const it = {
+  locale: "it",
+  language: {
+    it: "IT",
+    en: "EN",
+  },
+  brand: {
+    name: "GOLDEN TERRA TRAVEL LLC",
+    subtitle: "TOUR OPERATOR & DMC IN UZBEKISTAN",
+  },
+  hero: {
+    title: "Golden Terra Travel LLC",
+    subtitle: "Tour Operator & DMC in Uzbekistan",
+    authenticTitle: "Viaggi autentici",
+    authenticText: "Oltre le città leggendarie della Via della Seta",
+    guidesTitle: "Guide locali professionali",
+    assistanceTitle: "Assistenza dedicata",
+    assistanceText: "Prima, durante e dopo il viaggio.",
+    discoverTours: "Scopri i Tour",
+    contactUs: "Contattaci",
+  },
+  event: {
+    label: "EVENTO 2026",
+    intro: "✨ Saremo al",
+    title: "TTG Travel Experience",
+    date: "14–16 ottobre 2026",
+    place: "Rimini Expo Centre",
+    stand: "📍 Padiglione e stand saranno comunicati prossimamente.",
+    closing: "Ti aspettiamo a Rimini. Vieni a conoscere Golden Terra Travel.",
+  },
+  strengths: {
+    label: "I NOSTRI PUNTI DI FORZA",
+    title: "PERCHÉ VIAGGIARE CON NOI",
+    items: [
+      "Tour Operator & DMC autorizzato in Uzbekistan",
+      "Guide locali professionali parlanti italiano",
+      "Tour individuali, di gruppo e su misura",
+      "Esperienze autentiche in tutto l'Uzbekistan",
+      "Assistenza internazionale con referente italiana, prima, durante e dopo il viaggio.",
+      "Organizzazione completa dall'arrivo alla partenza",
+    ],
+  },
+  toursSection: {
+    label: "I NOSTRI TOUR",
+    title: "Parti alla scoperta dell'Uzbekistan",
+  },
+  tours: [
+    {
+      title: "Uzbekistan Classico",
+      text: "L'itinerario ideale per scoprire le città simbolo della Via della Seta.",
+      image: "/tours/uzbekistan-classic.jpg",
+      variant: "classic",
+      href: "/itinerari/uzbekistan-classic",
+      buttonLabel: "Vedi l'itinerario",
+      external: false,
+    },
+    {
+      title: "Capodanno sulla Via della Seta 2026",
+      text: "Festeggia il Capodanno nel cuore della Via della Seta con un viaggio speciale tra città leggendarie, atmosfere indimenticabili e tradizioni uzbeke.",
+      image: "/tours/capodanno.png",
+      variant: "poster",
+      href: "https://wa.me/393475218989?text=Buongiorno,%20vorrei%20ricevere%20il%20programma%20di%20Capodanno%20Uzbekistan%202027.",
+      buttonLabel: "Richiedi il programma",
+      external: true,
+    },
+    {
+      title: "Pasqua & Navruz in Uzbekistan 2027",
+      text: "Nel periodo più affascinante dell'anno, quando i mandorli sono in fiore e l'Uzbekistan celebra il Navruz, vi accompagneremo alla scoperta delle meraviglie della Via della Seta.",
+      image: "/tours/navruz.jpg",
+      variant: "poster",
+      href: "https://wa.me/393475218989?text=Buongiorno,%20vorrei%20ricevere%20il%20programma%20di%20Pasqua%20%26%20Navruz%20Uzbekistan%202027.",
+      buttonLabel: "Richiedi il programma",
+      external: true,
+    },
+  ],
+  navruz: {
+    intro: "Nel periodo più affascinante dell'anno, quando i mandorli sono in fiore e l'Uzbekistan celebra il Navruz, vi accompagneremo alla scoperta delle meraviglie della Via della Seta.",
+    places: ["Samarcanda", "Bukhara", "Khiva", "Tashkent", "Parco Nazionale Ugam-Chatkal"],
+    closing: "Un viaggio tra città leggendarie, tradizioni millenarie, colori, profumi e paesaggi primaverili unici.",
+  },
+  departures: {
+    label: "PARTENZE GARANTITE 2026-2027",
+    title: "Le nostre prossime partenze",
+    text: "Tutte le date indicate sono partenze garantite. Scegli il periodo più adatto per vivere l'Uzbekistan con noi.",
+    dates: [
+      "5 Agosto", "18 Agosto", "6 Settembre", "17 Settembre", "19 Ottobre",
+      "21 Ottobre", "3 Novembre", "7 Novembre", "29 Dicembre", "20 Marzo", "13 Maggio"
+    ],
+  },
+  team: {
+    label: "TEAM",
+    title: "Shukhrat & Silvia",
+    text: "Un team italo-uzbeko che vi accompagna con competenza e passione prima, durante e dopo ogni viaggio.",
+  },
+  social: {
+    label: "SEGUICI",
+    title: "Rimani in contatto con noi",
+    text: "Scopri foto, video e novità lungo la Via della Seta.",
+  },
+  contacts: {
+    label: "CONTATTI",
+    title: "Siamo a tua disposizione",
+    items: [
+      { label: "WhatsApp Italia", href: "https://wa.me/393475218989" },
+      { label: "WhatsApp Uzbekistan", href: "https://wa.me/998977181870" },
+      { label: "Email", href: "mailto:info@goldenterratravel.com" },
+      { label: "Sito web", href: "https://www.goldenterratravel.com" },
+    ],
+  },
+  bottomNav: {
+    home: "Home",
+    tours: "Tour",
+    contact: "Contatti",
+  },
+} as const;
