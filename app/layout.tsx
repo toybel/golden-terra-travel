@@ -6,6 +6,35 @@ export const metadata: Metadata = {
   title: "Golden Terra Travel | Tour in Uzbekistan",
   description:
     "Golden Terra Travel è un tour operator locale specializzato in viaggi e itinerari in Uzbekistan.",
+
+ 
+  appleWebApp: {
+    capable: true,
+    title: "Golden Terra Travel",
+    statusBarStyle: "black-translucent",
+  },
+
+  icons: {
+    icon: [
+      {
+        url: "/icon-192.png",
+        sizes: "192x192",
+        type: "image/png",
+      },
+      {
+        url: "/icon-512.png",
+        sizes: "512x512",
+        type: "image/png",
+      },
+    ],
+    apple: [
+      {
+        url: "/apple-touch-icon.png",
+        sizes: "180x180",
+        type: "image/png",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
