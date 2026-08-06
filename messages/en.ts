@@ -35,7 +35,7 @@ export const en = {
     title: "TTG Travel Experience",
     date: "14–16 October 2026",
     place: "Rimini Expo Centre",
-    stand: "📍 Hall and stand details will be announced soon.",
+    stand: "📍 Hall C7 • Stand 126",
     closing: "We look forward to meeting you in Rimini. Come and discover Golden Terra Travel.",
   },
   strengths: {
