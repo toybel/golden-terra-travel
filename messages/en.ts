@@ -36,7 +36,7 @@ export const en = {
     date: "14–16 October 2026",
     place: "Rimini Expo Centre",
     stand: "📍 Hall C7 • Stand 126",
-    closing: "We look forward to meeting you in Rimini. Come and discover Golden Terra Travel.",
+    closing: "Discover Golden Terra Travel in Rimini.",
   },
   strengths: {
     label: "OUR STRENGTHS",
