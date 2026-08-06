@@ -115,6 +115,9 @@ export const en = {
       { label: "WhatsApp Uzbekistan", href: "https://wa.me/998977181870" },
       { label: "Email", href: "mailto:info@goldenterratravel.com" },
       { label: "Website", href: "https://www.goldenterratravel.com" },
+       { label: "Privacy Policy", href: "https://www.goldenterratravel.com/privacy-policy/" },
+    { label: "Cookie Policy", href: "https://www.goldenterratravel.com/cookie-policy-ue/" },
+    { label: "Terms & Conditions", href: "https://www.goldenterratravel.com/termini-e-condizioni/" },
     ],
   },
   bottomNav: {
