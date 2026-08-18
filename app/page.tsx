@@ -334,8 +334,8 @@ export default function Home() {
             <Image
   src={
     language === "it"
-      ? "/team/shukhrat-silvia.jpg"
-      : "/team/shukhrat-silvia-en.jpg"
+      ? "/team/shukhrat-silvia-en.png"
+      : "/team/shukhrat-silvia-it.png"
   }
   alt="Shukhrat and Silvia"
   width={900}
