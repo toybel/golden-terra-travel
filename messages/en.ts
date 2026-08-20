@@ -76,7 +76,7 @@ export const en = {
     {
       title: "Easter & Navruz in Uzbekistan 2027",
       text: "During the most fascinating season of the year, when the almond trees are in bloom and Uzbekistan celebrates Navruz, we will guide you through the wonders of the Silk Road.",
-      image: "/tours/navruz-en.jpg",
+      image: "/tours/navruz-en.png",
       variant: "poster",
       href: "https://wa.me/393475218989?text=Hello,%20I%20would%20like%20to%20receive%20the%20Easter%20and%20Navruz%20Uzbekistan%202027%20programme.",
       buttonLabel: "Request the programme",
