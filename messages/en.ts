@@ -50,6 +50,14 @@ export const en = {
       "Complete organisation from arrival to departure",
     ],
   },
+
+otherTours: {
+  label: "MORE JOURNEYS",
+  title: "Discover more tours in Uzbekistan",
+  text: "From the cities of the Silk Road to the desert landscapes, discover all the experiences and itineraries offered by Golden Terra Travel.",
+  button: "Explore all tours",
+},
+
   toursSection: {
     label: "OUR TOURS",
     title: "Discover Uzbekistan with us",

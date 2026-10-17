@@ -50,6 +50,14 @@ export const it = {
       "Organizzazione completa dall'arrivo alla partenza",
     ],
   },
+
+otherTours: {
+  label: "ALTRI VIAGGI",
+  title: "Scopri gli altri tour in Uzbekistan",
+  text: "Dalle città della Via della Seta ai paesaggi del deserto, scopri tutte le esperienze e gli itinerari di Golden Terra Travel.",
+  button: "Esplora tutti i tour",
+},
+
   toursSection: {
     label: "I NOSTRI TOUR",
     title: "Parti alla scoperta dell'Uzbekistan",

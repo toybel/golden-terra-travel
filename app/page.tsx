@@ -318,6 +318,29 @@ export default function Home() {
           </div>
         </section>
 
+<section className="rounded-[2rem] border border-[#D4AF37]/30 bg-[#16072F] p-6 text-center">
+  <p className="text-xs tracking-[0.35em] text-[#D4AF37]">
+    {t.otherTours.label}
+  </p>
+
+  <h2 className="mt-4 text-3xl font-bold text-white">
+    {t.otherTours.title}
+  </h2>
+
+  <p className="mt-4 leading-relaxed text-white/80">
+    {t.otherTours.text}
+  </p>
+
+  <a
+    href="https://www.goldenterratravel.com/tour/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="mt-6 inline-block rounded-full bg-[#D4AF37] px-7 py-3 font-semibold text-[#16072F] transition hover:bg-[#e6c65a]"
+  >
+    {t.otherTours.button}
+  </a>
+</section>
+
         <section className="mt-6 rounded-[2rem] border border-white/15 bg-[#16072F] p-6">
           <p className="text-xs tracking-[0.35em] text-[#D4AF37]">{t.team.label}</p>
           <div className="mt-5 overflow-hidden rounded-[1.75rem] border border-white/15 bg-[#0F0620]">
