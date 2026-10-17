@@ -1,7 +1,7 @@
-
 "use client";
 
 import { useEffect, useState } from "react";
+import InformazioniUtili from "../../components/InformazioniUtili";
 
 const translations = {
   it: {
@@ -313,6 +313,8 @@ export default function MyUzbekistanPage() {
             {lang === "it" ? "Apri la mia posizione" : "Open my location"}
           </span>
         </a>
+
+        <InformazioniUtili lang={lang} />
 
         <h2 className="mb-6 mt-10 text-center text-2xl font-bold text-[#D4AF37]">
           {t.packingTitle}
