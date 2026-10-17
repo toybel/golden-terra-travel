@@ -93,7 +93,7 @@ export const en = {
     title: "Our upcoming departures",
     text: "All listed dates are guaranteed departures. Choose the best time to experience Uzbekistan with us.",
     dates: [
-      "5 August", "18 August", "6 September", "17 September", "19 October",
+      "19 October",
       "21 October", "3 November", "7 November", "29 December", "20 March", "13 May"
     ],
   },

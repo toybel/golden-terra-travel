@@ -93,7 +93,7 @@ export const it = {
     title: "Le nostre prossime partenze",
     text: "Tutte le date indicate sono partenze garantite. Scegli il periodo più adatto per vivere l'Uzbekistan con noi.",
     dates: [
-      "5 Agosto", "18 Agosto", "6 Settembre", "17 Settembre", "19 Ottobre",
+      "19 Ottobre",
       "21 Ottobre", "3 Novembre", "7 Novembre", "29 Dicembre", "20 Marzo", "13 Maggio"
     ],
   },
