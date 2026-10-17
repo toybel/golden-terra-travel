@@ -341,6 +341,31 @@ export default function Home() {
   </a>
 </section>
 
+<section className="mt-6 rounded-[2rem] border border-[#D4AF37]/30 bg-[#16072F] p-6 text-center">
+  <div className="mb-4 text-5xl">🧳</div>
+
+  <p className="text-xs tracking-[0.35em] text-[#D4AF37]">
+    GOLDEN TERRA TRAVEL
+  </p>
+
+  <h2 className="mt-4 text-3xl font-bold text-white">
+    {language === "it" ? "Il mio Uzbekistan" : "My Uzbekistan"}
+  </h2>
+
+  <p className="mt-4 leading-relaxed text-white/80">
+    {language === "it"
+      ? "Prepara il tuo viaggio con la nostra valigia interattiva. Spunta quello che hai già preparato e tieni tutto sotto controllo!"
+      : "Get ready for your journey with our interactive packing checklist. Tick off what you've packed and stay organized!"}
+  </p>
+
+  <a
+    href={`/il-mio-uzbekistan?lang=${language}`}
+    className="mt-6 inline-block rounded-full bg-[#D4AF37] px-7 py-3 font-semibold text-[#16072F] transition hover:bg-[#e6c65a]"
+  >
+    {language === "it" ? "Prepara la valigia" : "Prepare your suitcase"}
+  </a>
+</section>
+
         <section className="mt-6 rounded-[2rem] border border-white/15 bg-[#16072F] p-6">
           <p className="text-xs tracking-[0.35em] text-[#D4AF37]">{t.team.label}</p>
           <div className="mt-5 overflow-hidden rounded-[1.75rem] border border-white/15 bg-[#0F0620]">
