@@ -197,17 +197,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="mt-5 rounded-[1.75rem] border border-[#D4AF37]/30 bg-[#16072F] px-6 py-7 text-center">
-          <p className="text-xs tracking-[0.35em] text-[#D4AF37]">{t.event.label}</p>
-          <p className="mt-4 text-lg text-white/80">{t.event.intro}</p>
-          <h2 className="mt-2 text-3xl font-bold text-white">{t.event.title}</h2>
-          <p className="mt-4 text-lg font-semibold text-[#D4AF37]">{t.event.date}</p>
-          <p className="mt-2 text-white/70">{t.event.place}</p>
-          <div className="mt-5 rounded-xl border border-dashed border-[#D4AF37]/40 bg-white/5 px-4 py-3">
-            <p className="text-sm text-white/80">{t.event.stand}</p>
-          </div>
-          <p className="mt-5 text-sm text-white/80">{t.event.closing}</p>
-        </section>
+        
 
         <section className="mt-6 rounded-[2rem] border border-white/15 bg-[#16072F] p-6">
           <p className="text-xs tracking-[0.35em] text-[#D4AF37]">{t.strengths.label}</p>
