@@ -312,11 +312,7 @@ export default function UzbekistanClassicPage() {
 
           <div className="mt-8 grid grid-cols-2 gap-3">
             {[
-              "5 Agosto",
-              "18 Agosto",
-              "6 Settembre",
-              "17 Settembre",
-              "19 Ottobre",
+               "19 Ottobre",
               "21 Ottobre",
               "3 Novembre",
               "7 Novembre",
